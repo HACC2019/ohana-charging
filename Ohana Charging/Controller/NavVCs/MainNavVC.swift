@@ -1,19 +1,15 @@
 //
-//  ViewController.swift
+//  MainNavVC.swift
 //  Ohana Charging
 //
 //  Created by Zachary Kline on 10/19/19.
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
+class MainNavVC: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
-
-
+    
 }
-

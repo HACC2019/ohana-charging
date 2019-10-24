@@ -14,6 +14,7 @@ class StationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var averageCars: UILabel!
     @IBOutlet weak var averageEnergy: UILabel!
     @IBOutlet weak var averageDuration: UILabel!
+    @IBOutlet weak var averageSpent: UILabel!
     
     override func layoutSubviews() {
         stationImage.tintColor = UIColor.black

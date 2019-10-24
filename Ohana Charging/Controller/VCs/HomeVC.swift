@@ -10,13 +10,18 @@ class HomeVC: UIViewController {
     
     var stationInfoA : [StationData] = []
     var stationInfoB : [StationData] = []
+    var stations : [Any] = []
     var settingsLabels = ["Contact Us", "About Us"]
     var menuShowing = false
+    var isSheetCreated = false
     private let blackView = UIView()
     private let clearView = UIView()
 
-    let stationAFileName = "stationA.json"
-    let stationBFileName = "stationB.json"
+    let stationAFileName = "stationA"
+    let stationBFileName = "stationB"
+    let actionSheet = UIAlertController(title: "Averaging Options",
+    message: "Please select an averaging option to show",
+    preferredStyle: .actionSheet)
     
     @IBOutlet weak var optionsButton: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,10 +33,17 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        
+        //Hide sliding menu
         tableLeadingConstraint.constant = -238.0
         
-//        loadStationA()
-//        print(stationInfoA[0].id)
+        //Load JSON Data Files into arrays
+        stationInfoA = loadStationData(name: stationAFileName)
+        stationInfoB = loadStationData(name: stationBFileName)
+        
+        //This array is used in feed
+        stations = [stationInfoA,stationInfoB]
+//        print("HELLO: \(stationInfoA[0].dollarAmount)")
     
     }
     
@@ -53,6 +65,45 @@ class HomeVC: UIViewController {
     
     @IBAction func refreshPressed(_ sender: Any) {
         print("Refresh Pressed")
+    }
+    
+    @IBAction func avgPressed(_ sender: Any) {
+        print("Average Button Pressed")
+        presentSheet()
+    }
+    
+    private func presentSheet(){
+        if !isSheetCreated{
+            actionSheet.addAction(UIAlertAction(title: "Session Average", style: .default, handler: { (_) in
+                
+             
+                
+            }))
+            actionSheet.addAction(UIAlertAction(title: "Daily Average", style: .default, handler: { (_) in
+                
+             
+                
+                
+
+                
+            }))
+            actionSheet.addAction(UIAlertAction(title: "Monthly Average", style: .default, handler: { (_) in
+                
+              
+                
+            }))
+            
+            //close alert
+            actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { (_) in
+                self.actionSheet.dismiss(animated: true, completion: nil)
+                
+            }))
+            
+            isSheetCreated = true
+            
+            
+        }
+        self.present(actionSheet, animated: true, completion: nil)
     }
     
     private func createClearView(){
@@ -162,37 +213,59 @@ class HomeVC: UIViewController {
         return nil
     }
     
-    func loadJSON(_ name: String) -> Any{
-          if let data = loadJSONData(name){
-              do {
-                  return try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-              } catch {
-                  print("Cannot read JSON:",name)
-              }
-          }
-          return [:]
-      }
-    
-    private func loadStationA(){
-          let decoder = JSONDecoder()
-          do {
-              if let data = loadJSONData(stationAFileName){
-                  let stationA = try decoder.decode([StationDataStruct].self, from: data)
-                  for data in stationA{
-                    stationInfoA.append(StationData(id: Int(data.id) ?? -1,
-                                                    startDate: data.startDate, endDate: data.endDate,
-                                                    duration: Int(data.duration) ?? -1,
-                                                    energy: Double(data.energy) ?? -1,
-                                                    dollarAmount: Double(data.dollarAmount) ?? -1,
+    //Loads json file into data array
+    private func loadStationData(name: String) -> [StationData]{
+        var dataArray : [StationData] = []
+        let decoder = JSONDecoder()
+        do {
+            if let data = loadJSONData(name){
+                let station = try decoder.decode([StationDataStruct].self, from: data)
+                for data in station{
+                dataArray.append(StationData(startDate: data.startDate,
+                                                    startTime: data.startTime,
+                                                    endDate: data.endDate,
+                                                    endTime: data.endTime,
+                                                    duration: Int(data.duration) ,
+                                                    energy: Double(data.energy) ,
+                                                    dollarAmount: Double(data.dollarAmount) ,
                                                     portType: data.portType,
                                                     paymentMethod: data.paymentMethod))
-                  }
-              }
-          } catch {
-              print("ERROR LOADING JSON")
-              print(error.localizedDescription)
-          }
+                }
+            }
+            return dataArray
+        } catch {
+            print("ERROR LOADING JSON: \(error)")
+        }
+        return dataArray
       }
+    
+    //Averages per day
+    //Return array = [averageType, carAverage,spentAvereage,energyAverage,durationAverage]
+    private func calculateSecessionAverage(array: [StationData]) -> [String]{
+        var output : [String] = []
+//        var carAverage = StationData.cou
+        var spentAverage = 0.0
+        var energyAverage = 0.0
+        var durationAverage = 0
+        
+        for data in array{
+            spentAverage += data.dollarAmount
+            energyAverage += data.energy
+            durationAverage += data.duration
+        }
+        
+        //Divide by total secessions to calc average
+        spentAverage /= Double(array.count)
+        spentAverage = spentAverage.rounded(toPlaces: 2)
+        
+        energyAverage /= Double(array.count)
+        energyAverage = energyAverage.rounded(toPlaces: 2)
+
+        durationAverage /= array.count
+
+        output = ["Session Average","",String(spentAverage),String(energyAverage),String(durationAverage)]
+        return output
+    }
    
 }
 
@@ -207,19 +280,20 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     
     //Number of cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return stations.count
     }
     
     //Cell properties
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-   
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StationCollectionViewCell
-        cell.stationId.text = "Station ID: 1"
+        let secessionAverage = calculateSecessionAverage(array: stations[indexPath.row] as! [StationData])
+        cell.stationId.text = "Station ID: \(indexPath.row + 1)"
         cell.stationImage.image = UIImage(named: "goodBatteryIcon.png")
-        cell.averageTitle.text = "Average"
-        cell.averageCars.text = "100 cars"
-        cell.averageEnergy.text = "50 kWh"
-        cell.averageDuration.text = "100 Seconds"
+        cell.averageTitle.text = secessionAverage[0]
+        cell.averageCars.text = secessionAverage[1]
+        cell.averageSpent.text = "$\(secessionAverage[2])"
+        cell.averageEnergy.text = "\(secessionAverage[3]) kWh"
+        cell.averageDuration.text = "\(secessionAverage[4]) Sec."
         return cell
     }
     

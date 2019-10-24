@@ -7,41 +7,47 @@
 
 struct StationDataStruct: Codable{
     
-    let id : String
     let startDate : String
+    let startTime: String
     let endDate : String
-    let duration : String
-    let energy : String //kwH
-    let dollarAmount : String //in dollars $$
+    let endTime: String
+    let duration : Int
+    let energy : Double //kwH
+    let dollarAmount : Double //in dollars $$
     let portType : String //Cases-> CHADEMO or DCCOMBOTYP1
     let paymentMethod : String //Cases -> CREDITCARD or RFID
     
     private enum CodingKeys: String, CodingKey {
-        case id,startDate,endDate,duration,energy,dollarAmount,portType,paymentMethod
-        //        case id = "barID"
-        //        case startDate = "sa"
-        //        case type = "type"
-        //        case price = "price"
-        //        case size = "size"
+        case startDate = "startDate"
+        case startTime = "startTime"
+        case endDate = "endDate"
+        case endTime = "endTime"
+        case duration = "duration"
+        case energy = "energy"
+        case dollarAmount = "amount"
+        case portType = "portType"
+        case paymentMethod = "paymentMode"
     }
     
 }
 
 class StationData{
-    var id : Int
     var startDate : String
+    var startTime: String
     var endDate : String
+    var endTime : String
     var duration : Int
     var energy : Double //kwH
     var dollarAmount : Double //in dollars $$
     var portType : String //Cases-> CHADEMO or DCCOMBOTYP1
     var paymentMethod : String //Cases -> CREDITCARD or RFID
     
-    init(id: Int, startDate: String, endDate: String, duration: Int,
+    init(startDate: String,startTime: String, endDate: String,endTime: String, duration: Int,
          energy: Double, dollarAmount: Double, portType: String, paymentMethod: String){
-        self.id = id
         self.startDate = startDate
+        self.startTime = startTime
         self.endDate = endDate
+        self.endTime = endTime
         self.duration = duration
         self.energy = energy
         self.dollarAmount = dollarAmount

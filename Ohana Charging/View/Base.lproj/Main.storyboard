@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,11 +46,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Station ID" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-oA-Qjh">
+                                <rect key="frame" x="0.0" y="99" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="DQ7-DQ-m2L"/>
+                                    <constraint firstAttribute="height" constant="44" id="NgK-ca-grm"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-ur-T3R">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="143" width="414" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="808" id="T5I-Ah-Pkd"/>
+                                    <constraint firstAttribute="height" constant="753" id="T5I-Ah-Pkd"/>
                                     <constraint firstAttribute="width" constant="414" id="egW-AM-S6L"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ISS-4t-f2g">
@@ -60,7 +68,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <view key="backgroundView" contentMode="scaleToFill" id="mrn-nI-zjL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="753"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </view>
@@ -87,26 +95,33 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Averages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-I5-m01">
                                                     <rect key="frame" x="8" y="46" width="123" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AvgCar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQZ-vT-roe">
-                                                    <rect key="frame" x="8" y="83" width="123" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AvgKwh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-2X-ufb">
-                                                    <rect key="frame" x="8" y="146" width="123" height="21"/>
+                                                    <rect key="frame" x="8" y="104" width="123" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AvgDur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U02-dL-Nbq">
-                                                    <rect key="frame" x="8" y="216" width="123" height="21"/>
+                                                    <rect key="frame" x="8" y="133" width="123" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-yU-TMq">
+                                                    <rect key="frame" x="31" y="75" width="78" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AvgCar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQZ-vT-roe">
+                                                    <rect key="frame" x="8" y="162" width="123" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -119,6 +134,7 @@
                                             <outlet property="averageCars" destination="WQZ-vT-roe" id="bzl-kn-bNx"/>
                                             <outlet property="averageDuration" destination="U02-dL-Nbq" id="avZ-U5-3ge"/>
                                             <outlet property="averageEnergy" destination="NbU-2X-ufb" id="cLw-53-KWe"/>
+                                            <outlet property="averageSpent" destination="Csd-yU-TMq" id="5zH-LI-C1i"/>
                                             <outlet property="averageTitle" destination="YtL-I5-m01" id="CTD-86-NjZ"/>
                                             <outlet property="stationId" destination="fFk-FI-q6q" id="Cg1-sL-a0t"/>
                                             <outlet property="stationImage" destination="5MZ-oF-Zdo" id="gZq-Rg-qBv"/>
@@ -155,13 +171,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hHZ-oA-Qjh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="CJy-fR-sXX"/>
                             <constraint firstAttribute="bottom" secondItem="Y5Y-ur-T3R" secondAttribute="bottom" id="ISg-sV-4pZ"/>
+                            <constraint firstItem="mrn-nI-zjL" firstAttribute="top" secondItem="hHZ-oA-Qjh" secondAttribute="bottom" id="WWj-cT-tuh"/>
+                            <constraint firstItem="hHZ-oA-Qjh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dtd-ec-bXq"/>
                             <constraint firstItem="Vtc-F7-Hcm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hby-wd-Ox7"/>
                             <constraint firstAttribute="bottom" secondItem="Vtc-F7-Hcm" secondAttribute="bottom" id="iEd-3w-kQG"/>
                             <constraint firstItem="Y5Y-ur-T3R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jJd-gz-8Xe"/>
                             <constraint firstItem="Y5Y-ur-T3R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mEy-bV-Isi"/>
                             <constraint firstItem="Vtc-F7-Hcm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q8d-PR-rX9"/>
-                            <constraint firstItem="Y5Y-ur-T3R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rqW-Gk-4qK"/>
+                            <constraint firstItem="Y5Y-ur-T3R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="rqW-Gk-4qK"/>
+                            <constraint firstItem="hHZ-oA-Qjh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sfM-k9-n8X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -173,11 +193,18 @@
                                 <action selector="optionsPressed:" destination="BYZ-38-t0r" id="GyH-GK-nZG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="refreshIcon" id="e7m-zO-2dm">
-                            <connections>
-                                <action selector="refreshPressed:" destination="BYZ-38-t0r" id="jhF-cn-AQc"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="changeAvgIcon" id="dO0-Fr-f43">
+                                <connections>
+                                    <action selector="avgPressed:" destination="BYZ-38-t0r" id="TgM-am-kwa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="refreshIcon" id="e7m-zO-2dm">
+                                <connections>
+                                    <action selector="refreshPressed:" destination="BYZ-38-t0r" id="jhF-cn-AQc"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Y5Y-ur-T3R" id="Txg-4L-ZcZ"/>
@@ -190,7 +217,7 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="138.61607142857142"/>
         </scene>
-        <!--DetailVC-->
+        <!--Title-->
         <scene sceneID="lBf-oM-vdD">
             <objects>
                 <viewController storyboardIdentifier="DetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OZ7-IH-KBM" customClass="DetailVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,6 +227,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Frq-XH-zjO"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="ZOs-Pe-1RW">
+                        <barButtonItem key="rightBarButtonItem" image="gpsIcon" id="a2P-K6-k50"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SQ-MX-kCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,8 +264,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="changeAvgIcon" width="11.333333015441895" height="32.666667938232422"/>
+        <image name="gpsIcon" width="40" height="40"/>
         <image name="justIcon" width="666.66668701171875" height="666.66668701171875"/>
-        <image name="optionButton" width="48" height="48"/>
-        <image name="refreshIcon" width="48" height="48"/>
+        <image name="optionButton" width="40" height="40"/>
+        <image name="refreshIcon" width="26.666666030883789" height="26"/>
     </resources>
 </document>

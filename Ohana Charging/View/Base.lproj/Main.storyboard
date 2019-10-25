@@ -209,6 +209,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Y5Y-ur-T3R" id="Txg-4L-ZcZ"/>
                         <outlet property="optionsButton" destination="U02-25-E0e" id="VuP-bb-0xG"/>
+                        <outlet property="searchBar" destination="hHZ-oA-Qjh" id="mgB-pO-aMB"/>
                         <outlet property="tableLeadingConstraint" destination="q8d-PR-rX9" id="SW8-cb-YUT"/>
                         <outlet property="tableView" destination="Vtc-F7-Hcm" id="0jy-Fl-8dL"/>
                     </connections>

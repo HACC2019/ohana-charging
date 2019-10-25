@@ -11,9 +11,12 @@ class HomeVC: UIViewController {
     var stationInfoA : [StationData] = []
     var stationInfoB : [StationData] = []
     var stations : [Any] = []
+    var searchingStations : [Any] = []
     var settingsLabels = ["Contact Us", "About Us"]
     var menuShowing = false
     var isSheetCreated = false
+    var searching = false
+    var selectedAverage = "session"
     private let blackView = UIView()
     private let clearView = UIView()
 
@@ -27,7 +30,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableLeadingConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,33 +78,24 @@ class HomeVC: UIViewController {
     private func presentSheet(){
         if !isSheetCreated{
             actionSheet.addAction(UIAlertAction(title: "Session Average", style: .default, handler: { (_) in
-                
-             
-                
+                self.selectedAverage = "session"
+                self.collectionView.reloadData()
             }))
             actionSheet.addAction(UIAlertAction(title: "Daily Average", style: .default, handler: { (_) in
-                
-             
-                
-                
-
-                
+                self.selectedAverage = "daily"
+                self.collectionView.reloadData()
             }))
             actionSheet.addAction(UIAlertAction(title: "Monthly Average", style: .default, handler: { (_) in
-                
-              
-                
+                self.selectedAverage = "monthly"
+                self.collectionView.reloadData()
             }))
             
             //close alert
             actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { (_) in
                 self.actionSheet.dismiss(animated: true, completion: nil)
-                
             }))
             
-            isSheetCreated = true
-            
-            
+            isSheetCreated = true //makes sure sheet is only created once
         }
         self.present(actionSheet, animated: true, completion: nil)
     }
@@ -238,35 +232,75 @@ class HomeVC: UIViewController {
         }
         return dataArray
       }
+
     
-    //Averages per day
+    //Calculate type of average based on typeAverage
     //Return array = [averageType, carAverage,spentAvereage,energyAverage,durationAverage]
-    private func calculateSecessionAverage(array: [StationData]) -> [String]{
+    private func calculateAverage(array: [StationData], typeAverage: String) -> [String]{
         var output : [String] = []
-//        var carAverage = StationData.cou
+        var numDays = 0
+        var numMonths = 0
+        var carAverage = 0
         var spentAverage = 0.0
         var energyAverage = 0.0
         var durationAverage = 0
-        
+        var previousDay = (array[0].endDate.split(separator: "/"))[1]
+        var previousMonth = (array[0].endDate.split(separator: "/"))[0]
+
+           
         for data in array{
+            
+            //If daily average then calculate number of days
+            if typeAverage == "daily"{
+                let day = (data.endDate.split(separator: "/"))[1]
+                if(previousDay != day) {
+                    previousDay = day
+                    numDays += 1
+                }
+            }else if typeAverage == "monthly"{
+                let month = (data.endDate.split(separator: "/"))[0]
+                if(previousMonth != month) {
+                    previousMonth = month
+                    numMonths += 1
+                }
+            }
+            
+            carAverage += 1
             spentAverage += data.dollarAmount
             energyAverage += data.energy
             durationAverage += data.duration
         }
         
-        //Divide by total secessions to calc average
-        spentAverage /= Double(array.count)
+        if typeAverage == "daily"{
+            //Divide by total days to calc average
+            carAverage /= numDays
+            spentAverage /= Double(numDays)
+            energyAverage /= Double(numDays)
+            durationAverage /= numDays
+        }else if typeAverage == "monthly"{
+            //Divide by total months to calc average
+            carAverage /= numMonths
+            spentAverage /= Double(numMonths)
+            energyAverage /= Double(numMonths)
+            durationAverage /= numMonths
+        }else{ //session average
+            //Divide by total secessions to calc average
+            spentAverage /= Double(array.count)
+            energyAverage /= Double(array.count)
+            durationAverage /= array.count
+        }
+       
         spentAverage = spentAverage.rounded(toPlaces: 2)
-        
-        energyAverage /= Double(array.count)
         energyAverage = energyAverage.rounded(toPlaces: 2)
 
-        durationAverage /= array.count
 
-        output = ["Session Average","",String(spentAverage),String(energyAverage),String(durationAverage)]
+
+        output = ["\(typeAverage.capitalizingFirstLetter()) Average",String(carAverage),String(spentAverage),String(energyAverage),String(durationAverage)]
         return output
     }
-   
+    func secondsToHoursMinutes (seconds : Int) -> (Int, Int) {
+      return (seconds / 3600, (seconds % 3600) / 60)
+    }
 }
 
 //Collection View -> Showing the preview of the station data
@@ -280,24 +314,52 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     
     //Number of cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stations.count
+        if searching{return searchingStations.count}
+        else{return stations.count}
     }
     
     //Cell properties
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StationCollectionViewCell
-        let secessionAverage = calculateSecessionAverage(array: stations[indexPath.row] as! [StationData])
+        var averageData : [String] = []
+    
+        //if searching use searchingStations array
+        if searching{
+            if selectedAverage == "session"{
+                averageData = calculateAverage(array: searchingStations[indexPath.row] as! [StationData], typeAverage: "session")
+            }else if selectedAverage == "daily"{
+                averageData = calculateAverage(array: searchingStations[indexPath.row] as! [StationData], typeAverage: "daily")
+            }else{ //monthly
+                averageData = calculateAverage(array: searchingStations[indexPath.row] as! [StationData], typeAverage: "monthly")
+            }
+            
+        //elseuse stations array
+        }else{
+            if selectedAverage == "session"{
+                averageData = calculateAverage(array: stations[indexPath.row] as! [StationData], typeAverage: "session")
+            }else if selectedAverage == "daily"{
+                averageData = calculateAverage(array: stations[indexPath.row] as! [StationData], typeAverage: "daily")
+            }else{ //monthly
+                averageData = calculateAverage(array: stations[indexPath.row] as! [StationData], typeAverage: "monthly")
+            }
+        }
+        //time.0 = hours, time.1 = min
+        let time = secondsToHoursMinutes(seconds: Int(averageData[4]) ?? -1)
+                
         cell.stationId.text = "Station ID: \(indexPath.row + 1)"
         cell.stationImage.image = UIImage(named: "goodBatteryIcon.png")
-        cell.averageTitle.text = secessionAverage[0]
-        cell.averageCars.text = secessionAverage[1]
-        cell.averageSpent.text = "$\(secessionAverage[2])"
-        cell.averageEnergy.text = "\(secessionAverage[3]) kWh"
-        cell.averageDuration.text = "\(secessionAverage[4]) Sec."
+        cell.averageTitle.text = averageData[0]
+        if averageData[1].isEmpty {cell.averageCars.text = averageData[1]} //print nothing if empty
+        else{cell.averageCars.text = "\(averageData[1]) cars"}
+        cell.averageSpent.text = "$\(averageData[2])"
+        cell.averageEnergy.text = "\(averageData[3]) kWh"
+        cell.averageDuration.text = "\(time.0):\(time.1)"
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        searchBar.endEditing(true) //when a cell is clicked hide keyboard
         navGoTo("DetailVC", animate: true)
     }
     
@@ -332,6 +394,22 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource{
             print(-1)
                 
         }
+    }
+    
+}
+extension HomeVC: UISearchBarDelegate{
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.endEditing(true) // gets rid of keyboard
+        searchBar.text = ""
+        collectionView.reloadData()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //no matter if user types in caps or not it will search thats why we force to lowercase
+//        searchingStations = dictionary.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
+//        searchingStations = stations.filter({$0 == searchText})
+        searching = true
+        collectionView.reloadData()
     }
     
 }

@@ -21,7 +21,6 @@ class HomeVC: UIViewController {
     var stationWorking = true
     private let blackView = UIView()
     private let clearView = UIView()
-    
     let stationAFileName = "stationA"
     let stationBFileName = "stationB"
     let actionSheet = UIAlertController(title: "Averaging Options",
@@ -48,6 +47,7 @@ class HomeVC: UIViewController {
         
         //This array is used in feed
         stations = [stationInfoA,stationInfoB]
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -438,7 +438,7 @@ extension HomeVC: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         //no matter if user types in caps or not it will search thats why we force to lowercase
         //        searchingStations = dictionary.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
-        //        searchingStations = stations.filter({$0 == searchText})
+//        searchingStations = stations.filter({$0 == searchText})
         searching = true
         collectionView.reloadData()
     }

@@ -20,8 +20,8 @@
 		DA87D8B3235EEE26002BA85A /* StationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8B2235EEE26002BA85A /* StationCollectionViewCell.swift */; };
 		DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8B4235EEE48002BA85A /* StationData.swift */; };
 		DAA496762361797200D17F56 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA496752361797200D17F56 /* Station.swift */; };
-		DADC9416236119B900E340B3 /* stationB.json in Resources */ = {isa = PBXBuildFile; fileRef = DADC9414236119B800E340B3 /* stationB.json */; };
-		DADC9417236119B900E340B3 /* stationA.json in Resources */ = {isa = PBXBuildFile; fileRef = DADC9415236119B800E340B3 /* stationA.json */; };
+		DACB166C236404CD0070A3BE /* stationB.json in Resources */ = {isa = PBXBuildFile; fileRef = DACB166A236404CD0070A3BE /* stationB.json */; };
+		DACB166D236404CD0070A3BE /* stationA.json in Resources */ = {isa = PBXBuildFile; fileRef = DACB166B236404CD0070A3BE /* stationA.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +40,8 @@
 		DA87D8B2235EEE26002BA85A /* StationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA87D8B4235EEE48002BA85A /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
 		DAA496752361797200D17F56 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		DADC9414236119B800E340B3 /* stationB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationB.json; sourceTree = "<group>"; };
-		DADC9415236119B800E340B3 /* stationA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationA.json; sourceTree = "<group>"; };
+		DACB166A236404CD0070A3BE /* stationB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationB.json; sourceTree = "<group>"; };
+		DACB166B236404CD0070A3BE /* stationA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationA.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +144,8 @@
 		DA87D8AA235EEB36002BA85A /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				DADC9415236119B800E340B3 /* stationA.json */,
-				DADC9414236119B800E340B3 /* stationB.json */,
+				DACB166B236404CD0070A3BE /* stationA.json */,
+				DACB166A236404CD0070A3BE /* stationB.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -216,10 +216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5664E7235C180700ABD256 /* LaunchScreen.storyboard in Resources */,
-				DADC9416236119B900E340B3 /* stationB.json in Resources */,
+				DACB166C236404CD0070A3BE /* stationB.json in Resources */,
 				DA5664E4235C180700ABD256 /* Assets.xcassets in Resources */,
 				DA5664E2235C180500ABD256 /* Main.storyboard in Resources */,
-				DADC9417236119B900E340B3 /* stationA.json in Resources */,
+				DACB166D236404CD0070A3BE /* stationA.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

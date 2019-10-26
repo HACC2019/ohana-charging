@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--InitialVC-->
         <scene sceneID="bjL-aA-Dmo">
             <objects>
-                <viewController storyboardIdentifier="InitialVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5sz-v0-X9V" customClass="InitialVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5sz-v0-X9V" customClass="InitialVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JEr-Iu-T3m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="1958" y="-623"/>
         </scene>
-        <!--Home-->
+        <!--Station Feed-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,54 +80,103 @@
                                             <rect key="frame" x="0.0" y="0.0" width="411" height="268"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5MZ-oF-Zdo">
-                                                    <rect key="frame" x="152" y="61" width="107" height="199"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-Ij-mxV">
+                                                    <rect key="frame" x="92.5" y="34" width="226" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="226" id="FBo-5o-TZz"/>
+                                                        <constraint firstAttribute="height" constant="29" id="air-AV-eGc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L9Q-45-evI">
+                                                    <rect key="frame" x="215" y="84" width="165" height="134"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Averages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-I5-m01">
+                                                            <rect key="frame" x="0.0" y="0.0" width="165" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="GVk-OG-pOc"/>
+                                                                <constraint firstAttribute="width" constant="165" id="OjZ-IT-C8e"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-yU-TMq">
+                                                            <rect key="frame" x="0.0" y="32" width="165" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="Fb3-iM-JkL"/>
+                                                                <constraint firstAttribute="width" constant="165" id="lJe-Dk-Go0"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AvgKwh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-2X-ufb">
+                                                            <rect key="frame" x="0.0" y="60" width="165" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="S6m-qO-xBo"/>
+                                                                <constraint firstAttribute="width" constant="165" id="sto-xZ-L4A"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AvgDur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U02-dL-Nbq">
+                                                            <rect key="frame" x="0.0" y="88" width="165" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="OOH-HR-huE"/>
+                                                                <constraint firstAttribute="width" constant="165" id="tGz-2s-pGs"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AvgCar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQZ-vT-roe">
+                                                            <rect key="frame" x="0.0" y="116" width="165" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="U7M-eK-nER"/>
+                                                                <constraint firstAttribute="width" constant="165" id="vdF-3a-uve"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="134" id="58k-ws-BJV"/>
+                                                        <constraint firstAttribute="width" constant="165" id="G7i-TG-cBb"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFk-FI-q6q">
+                                                    <rect key="frame" x="112" y="8" width="187" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="XjB-TE-86q"/>
+                                                        <constraint firstAttribute="width" constant="187" id="qwt-p1-U5V"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5MZ-oF-Zdo">
+                                                    <rect key="frame" x="38" y="71" width="145" height="189"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="189" id="Uwi-rc-Ngb"/>
+                                                        <constraint firstAttribute="width" constant="145" id="eps-Ev-ZDw"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Station ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFk-FI-q6q">
-                                                    <rect key="frame" x="108" y="23" width="187" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Averages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-I5-m01">
-                                                    <rect key="frame" x="8" y="46" width="123" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AvgKwh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbU-2X-ufb">
-                                                    <rect key="frame" x="8" y="104" width="123" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AvgDur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U02-dL-Nbq">
-                                                    <rect key="frame" x="8" y="133" width="123" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-yU-TMq">
-                                                    <rect key="frame" x="31" y="75" width="78" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AvgCar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQZ-vT-roe">
-                                                    <rect key="frame" x="8" y="162" width="123" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NTy-Ij-mxV" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" id="22V-FL-hmw"/>
+                                                <constraint firstItem="5MZ-oF-Zdo" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="31.5" id="Ec8-O0-IRK"/>
+                                                <constraint firstItem="NTy-Ij-mxV" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="-85.5" id="OBC-x3-hUp"/>
+                                                <constraint firstItem="fFk-FI-q6q" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" id="Zns-jD-t3t"/>
+                                                <constraint firstItem="fFk-FI-q6q" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="-114.5" id="gZJ-cX-48g"/>
+                                                <constraint firstItem="L9Q-45-evI" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" constant="92" id="jbb-wd-hAs"/>
+                                                <constraint firstItem="5MZ-oF-Zdo" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" constant="-95" id="mg1-Jy-Dkt"/>
+                                                <constraint firstItem="L9Q-45-evI" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="17" id="omP-dX-frD"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="411" height="268"/>
                                         <connections>
@@ -138,6 +187,7 @@
                                             <outlet property="averageTitle" destination="YtL-I5-m01" id="CTD-86-NjZ"/>
                                             <outlet property="stationId" destination="fFk-FI-q6q" id="Cg1-sL-a0t"/>
                                             <outlet property="stationImage" destination="5MZ-oF-Zdo" id="gZq-Rg-qBv"/>
+                                            <outlet property="stationStatus" destination="NTy-Ij-mxV" id="oaZ-QC-L5v"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -185,7 +235,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="QHl-hA-mHt">
+                    <navigationItem key="navigationItem" title="Station Feed" id="QHl-hA-mHt">
                         <barButtonItem key="backBarButtonItem" title=" " id="npY-8U-cSs"/>
                         <barButtonItem key="leftBarButtonItem" image="optionButton" id="U02-25-E0e">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -218,18 +268,23 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="138.61607142857142"/>
         </scene>
-        <!--Title-->
+        <!--DetailVC-->
         <scene sceneID="lBf-oM-vdD">
             <objects>
-                <viewController storyboardIdentifier="DetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OZ7-IH-KBM" customClass="DetailVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OZ7-IH-KBM" customClass="DetailVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iBZ-oW-ihI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Frq-XH-zjO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="ZOs-Pe-1RW">
-                        <barButtonItem key="rightBarButtonItem" image="gpsIcon" id="a2P-K6-k50"/>
+                    <navigationItem key="navigationItem" id="ZOs-Pe-1RW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FAx-BB-YtH"/>
+                        <barButtonItem key="rightBarButtonItem" image="gpsIcon" id="a2P-K6-k50">
+                            <connections>
+                                <action selector="mapPressed:" destination="OZ7-IH-KBM" id="kCP-DM-Cuf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SQ-MX-kCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -239,7 +294,7 @@
         <!--Main NavVC-->
         <scene sceneID="d3D-5F-Zq5">
             <objects>
-                <navigationController storyboardIdentifier="MainNavVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PwX-Bc-Op3" customClass="MainNavVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PwX-Bc-Op3" customClass="MainNavVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6vw-EP-NBq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

@@ -5589,17 +5589,6 @@
    },
    {
       "startDate": "10/3/18",
-      "startTime": "8:01",
-      "endDate": "10/3/18",
-      "endTime": "8:02",
-      "duration": 31,
-      "energy": 0.2,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "10/3/18",
       "startTime": "8:05",
       "endDate": "10/3/18",
       "endTime": "8:30",
@@ -7993,17 +7982,6 @@
       "duration": 2430,
       "energy": 10.42,
       "amount": 5.63,
-      "portType": "CHADEMO",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "10/19/18",
-      "startTime": "8:44",
-      "endDate": "10/19/18",
-      "endTime": "8:46",
-      "duration": 82,
-      "energy": 0.35,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
    },
@@ -11958,17 +11936,6 @@
    },
    {
       "startDate": "11/13/18",
-      "startTime": "18:06",
-      "endDate": "11/13/18",
-      "endTime": "18:35",
-      "duration": 1713,
-      "energy": 19.45,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "11/13/18",
       "startTime": "18:35",
       "endDate": "11/13/18",
       "endTime": "18:55",
@@ -12592,17 +12559,6 @@
       "energy": 3.39,
       "amount": 1.66,
       "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "11/18/18",
-      "startTime": "14:23",
-      "endDate": "11/18/18",
-      "endTime": "14:25",
-      "duration": 70,
-      "energy": 0.28,
-      "amount": 0,
-      "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
    },
    {
@@ -19361,17 +19317,6 @@
    },
    {
       "startDate": "1/6/19",
-      "startTime": "14:09",
-      "endDate": "1/6/19",
-      "endTime": "14:10",
-      "duration": 47,
-      "energy": 0.22,
-      "amount": 0,
-      "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "1/6/19",
       "startTime": "14:11",
       "endDate": "1/6/19",
       "endTime": "14:11",
@@ -19427,50 +19372,6 @@
    },
    {
       "startDate": "1/6/19",
-      "startTime": "17:54",
-      "endDate": "1/6/19",
-      "endTime": "17:54",
-      "duration": 42,
-      "energy": 0.2,
-      "amount": 0,
-      "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "1/6/19",
-      "startTime": "17:57",
-      "endDate": "1/6/19",
-      "endTime": "17:58",
-      "duration": 46,
-      "energy": 0.22,
-      "amount": 0,
-      "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "1/6/19",
-      "startTime": "17:59",
-      "endDate": "1/6/19",
-      "endTime": "18:00",
-      "duration": 42,
-      "energy": 0.19,
-      "amount": 0,
-      "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "1/6/19",
-      "startTime": "18:01",
-      "endDate": "1/6/19",
-      "endTime": "18:02",
-      "duration": 45,
-      "energy": 0.22,
-      "amount": 0,
-      "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "1/6/19",
       "startTime": "19:10",
       "endDate": "1/6/19",
       "endTime": "19:35",
@@ -19479,17 +19380,6 @@
       "amount": 5.61,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "1/6/19",
-      "startTime": "21:15",
-      "endDate": "1/6/19",
-      "endTime": "21:25",
-      "duration": 578,
-      "energy": 3.31,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "1/6/19",
@@ -19710,28 +19600,6 @@
       "amount": 0.34,
       "portType": "DCCOMBOTYP1",
       "paymentMode": "RFID"
-   },
-   {
-      "startDate": "1/9/19",
-      "startTime": "7:01",
-      "endDate": "1/9/19",
-      "endTime": "7:02",
-      "duration": 63,
-      "energy": 0.23,
-      "amount": 0,
-      "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "1/9/19",
-      "startTime": "7:04",
-      "endDate": "1/9/19",
-      "endTime": "7:05",
-      "duration": 74,
-      "energy": 0.24,
-      "amount": 0,
-      "portType": "DCCOMBOTYP1",
-      "paymentMode": "CREDITCARD"
    },
    {
       "startDate": "1/9/19",
@@ -21055,17 +20923,6 @@
    },
    {
       "startDate": "2/4/19",
-      "startTime": "14:03",
-      "endDate": "2/4/19",
-      "endTime": "14:13",
-      "duration": 597,
-      "energy": 4.42,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/4/19",
       "startTime": "14:16",
       "endDate": "2/4/19",
       "endTime": "15:03",
@@ -21737,17 +21594,6 @@
    },
    {
       "startDate": "2/8/19",
-      "startTime": "8:40",
-      "endDate": "2/8/19",
-      "endTime": "9:11",
-      "duration": 1823,
-      "energy": 18.66,
-      "amount": 0.13,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/8/19",
       "startTime": "10:08",
       "endDate": "2/8/19",
       "endTime": "11:37",
@@ -21803,17 +21649,6 @@
    },
    {
       "startDate": "2/8/19",
-      "startTime": "16:26",
-      "endDate": "2/8/19",
-      "endTime": "16:56",
-      "duration": 1803,
-      "energy": 9.9,
-      "amount": 0.01,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/8/19",
       "startTime": "18:24",
       "endDate": "2/8/19",
       "endTime": "18:31",
@@ -21830,17 +21665,6 @@
       "endTime": "18:32",
       "duration": 18,
       "energy": 0,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/8/19",
-      "startTime": "18:33",
-      "endDate": "2/8/19",
-      "endTime": "18:54",
-      "duration": 1256,
-      "energy": 14.01,
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
@@ -21943,17 +21767,6 @@
       "amount": 13.41,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "2/9/19",
-      "startTime": "21:38",
-      "endDate": "2/9/19",
-      "endTime": "22:09",
-      "duration": 1874,
-      "energy": 16.16,
-      "amount": 0.36,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "2/10/19",
@@ -22095,17 +21908,6 @@
       "duration": 18,
       "energy": 0,
       "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/10/19",
-      "startTime": "21:27",
-      "endDate": "2/10/19",
-      "endTime": "21:57",
-      "duration": 1819,
-      "energy": 19.68,
-      "amount": 0.12,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -22628,17 +22430,6 @@
    },
    {
       "startDate": "2/15/19",
-      "startTime": "11:30",
-      "endDate": "2/15/19",
-      "endTime": "12:01",
-      "duration": 1817,
-      "energy": 18.27,
-      "amount": 0.08,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/15/19",
       "startTime": "12:37",
       "endDate": "2/15/19",
       "endTime": "12:51",
@@ -22678,17 +22469,6 @@
       "duration": 1013,
       "energy": 8.28,
       "amount": 4.06,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/15/19",
-      "startTime": "16:46",
-      "endDate": "2/15/19",
-      "endTime": "17:14",
-      "duration": 1670,
-      "energy": 10.16,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -22903,17 +22683,6 @@
    },
    {
       "startDate": "2/17/19",
-      "startTime": "8:45",
-      "endDate": "2/17/19",
-      "endTime": "9:15",
-      "duration": 1790,
-      "energy": 9.12,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/17/19",
       "startTime": "10:56",
       "endDate": "2/17/19",
       "endTime": "11:29",
@@ -23101,17 +22870,6 @@
    },
    {
       "startDate": "2/18/19",
-      "startTime": "12:33",
-      "endDate": "2/18/19",
-      "endTime": "13:03",
-      "duration": 1809,
-      "energy": 18.51,
-      "amount": 0.05,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/18/19",
       "startTime": "13:08",
       "endDate": "2/18/19",
       "endTime": "15:46",
@@ -23162,17 +22920,6 @@
       "duration": 1956,
       "energy": 21.44,
       "amount": 12.22,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/18/19",
-      "startTime": "22:40",
-      "endDate": "2/18/19",
-      "endTime": "23:10",
-      "duration": 1764,
-      "energy": 13.31,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -23640,17 +23387,6 @@
    },
    {
       "startDate": "2/22/19",
-      "startTime": "15:38",
-      "endDate": "2/22/19",
-      "endTime": "16:08",
-      "duration": 1802,
-      "energy": 19.08,
-      "amount": 0.01,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/22/19",
       "startTime": "16:11",
       "endDate": "2/22/19",
       "endTime": "16:40",
@@ -23659,17 +23395,6 @@
       "amount": 6.76,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "2/22/19",
-      "startTime": "16:52",
-      "endDate": "2/22/19",
-      "endTime": "17:14",
-      "duration": 1336,
-      "energy": 10.02,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "2/22/19",
@@ -24009,17 +23734,6 @@
       "duration": 1479,
       "energy": 7.54,
       "amount": 4.07,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/25/19",
-      "startTime": "6:12",
-      "endDate": "2/25/19",
-      "endTime": "6:30",
-      "duration": 1064,
-      "energy": 12.26,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -24476,17 +24190,6 @@
    },
    {
       "startDate": "2/27/19",
-      "startTime": "16:50",
-      "endDate": "2/27/19",
-      "endTime": "17:18",
-      "duration": 1659,
-      "energy": 14.55,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "2/27/19",
       "startTime": "17:20",
       "endDate": "2/27/19",
       "endTime": "17:49",
@@ -24806,17 +24509,6 @@
    },
    {
       "startDate": "3/2/19",
-      "startTime": "14:09",
-      "endDate": "3/2/19",
-      "endTime": "14:40",
-      "duration": 1817,
-      "energy": 18.29,
-      "amount": 0.08,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/2/19",
       "startTime": "14:43",
       "endDate": "3/2/19",
       "endTime": "14:51",
@@ -24979,28 +24671,6 @@
       "amount": 7.96,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "3/4/19",
-      "startTime": "5:56",
-      "endDate": "3/4/19",
-      "endTime": "6:25",
-      "duration": 1760,
-      "energy": 14.96,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/4/19",
-      "startTime": "8:18",
-      "endDate": "3/4/19",
-      "endTime": "8:47",
-      "duration": 1757,
-      "energy": 9.47,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "3/4/19",
@@ -25840,17 +25510,6 @@
    },
    {
       "startDate": "3/9/19",
-      "startTime": "14:28",
-      "endDate": "3/9/19",
-      "endTime": "14:58",
-      "duration": 1806,
-      "energy": 16.86,
-      "amount": 0.03,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/9/19",
       "startTime": "16:08",
       "endDate": "3/9/19",
       "endTime": "16:22",
@@ -26225,17 +25884,6 @@
    },
    {
       "startDate": "3/12/19",
-      "startTime": "15:22",
-      "endDate": "3/12/19",
-      "endTime": "15:40",
-      "duration": 1065,
-      "energy": 11.8,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/12/19",
       "startTime": "15:48",
       "endDate": "3/12/19",
       "endTime": "16:01",
@@ -26266,17 +25914,6 @@
       "amount": 5.16,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "3/12/19",
-      "startTime": "18:29",
-      "endDate": "3/12/19",
-      "endTime": "18:59",
-      "duration": 1765,
-      "energy": 12.58,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "3/12/19",
@@ -26321,17 +25958,6 @@
       "amount": 12.16,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "3/13/19",
-      "startTime": "6:15",
-      "endDate": "3/13/19",
-      "endTime": "6:50",
-      "duration": 2109,
-      "energy": 20.71,
-      "amount": 1.64,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "3/13/19",
@@ -26698,17 +26324,6 @@
    },
    {
       "startDate": "3/15/19",
-      "startTime": "11:03",
-      "endDate": "3/15/19",
-      "endTime": "11:03",
-      "duration": 46,
-      "energy": 0.36,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/15/19",
       "startTime": "12:03",
       "endDate": "3/15/19",
       "endTime": "12:34",
@@ -26896,17 +26511,6 @@
    },
    {
       "startDate": "3/16/19",
-      "startTime": "11:23",
-      "endDate": "3/16/19",
-      "endTime": "11:52",
-      "duration": 1760,
-      "energy": 14.76,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/16/19",
       "startTime": "11:55",
       "endDate": "3/16/19",
       "endTime": "11:58",
@@ -27050,17 +26654,6 @@
    },
    {
       "startDate": "3/17/19",
-      "startTime": "14:40",
-      "endDate": "3/17/19",
-      "endTime": "15:10",
-      "duration": 1823,
-      "energy": 18.7,
-      "amount": 0.12,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/17/19",
       "startTime": "16:34",
       "endDate": "3/17/19",
       "endTime": "17:05",
@@ -27113,17 +26706,6 @@
       "amount": 10.33,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "3/18/19",
-      "startTime": "5:46",
-      "endDate": "3/18/19",
-      "endTime": "6:16",
-      "duration": 1810,
-      "energy": 19.49,
-      "amount": 0.06,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "3/18/19",
@@ -28018,17 +27600,6 @@
    },
    {
       "startDate": "3/28/19",
-      "startTime": "18:17",
-      "endDate": "3/28/19",
-      "endTime": "18:47",
-      "duration": 1784,
-      "energy": 15.41,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/28/19",
       "startTime": "18:49",
       "endDate": "3/28/19",
       "endTime": "19:15",
@@ -28359,17 +27930,6 @@
    },
    {
       "startDate": "3/31/19",
-      "startTime": "8:04",
-      "endDate": "3/31/19",
-      "endTime": "8:34",
-      "duration": 1796,
-      "energy": 17.07,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "3/31/19",
       "startTime": "12:24",
       "endDate": "3/31/19",
       "endTime": "13:10",
@@ -28491,17 +28051,6 @@
    },
    {
       "startDate": "4/1/19",
-      "startTime": "16:18",
-      "endDate": "4/1/19",
-      "endTime": "16:32",
-      "duration": 816,
-      "energy": 10.01,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/1/19",
       "startTime": "17:10",
       "endDate": "4/1/19",
       "endTime": "18:34",
@@ -28589,17 +28138,6 @@
       "paymentMode": "RFID"
    },
    {
-      "startDate": "4/1/19",
-      "startTime": "23:44",
-      "endDate": "4/1/19",
-      "endTime": "23:58",
-      "duration": 807,
-      "energy": 9.98,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
       "startDate": "4/2/19",
       "startTime": "5:24",
       "endDate": "4/2/19",
@@ -28609,17 +28147,6 @@
       "amount": 9.95,
       "portType": "DCCOMBOTYP1",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "4/2/19",
-      "startTime": "9:53",
-      "endDate": "4/2/19",
-      "endTime": "10:23",
-      "duration": 1812,
-      "energy": 18.75,
-      "amount": 0.06,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "4/2/19",
@@ -28689,28 +28216,6 @@
    },
    {
       "startDate": "4/2/19",
-      "startTime": "16:38",
-      "endDate": "4/2/19",
-      "endTime": "17:40",
-      "duration": 3758,
-      "energy": 29.27,
-      "amount": 7.47,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/2/19",
-      "startTime": "17:47",
-      "endDate": "4/2/19",
-      "endTime": "18:17",
-      "duration": 1783,
-      "energy": 16.29,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/2/19",
       "startTime": "19:19",
       "endDate": "4/2/19",
       "endTime": "19:32",
@@ -28750,17 +28255,6 @@
       "duration": 4900,
       "energy": 46.29,
       "amount": 25,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/3/19",
-      "startTime": "10:11",
-      "endDate": "4/3/19",
-      "endTime": "10:41",
-      "duration": 1815,
-      "energy": 11.85,
-      "amount": 0.05,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -28925,28 +28419,6 @@
       "endTime": "14:20",
       "duration": 7,
       "energy": 0,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/4/19",
-      "startTime": "14:25",
-      "endDate": "4/4/19",
-      "endTime": "14:27",
-      "duration": 141,
-      "energy": 1.55,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/4/19",
-      "startTime": "14:29",
-      "endDate": "4/4/19",
-      "endTime": "14:57",
-      "duration": 1723,
-      "energy": 14.58,
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
@@ -29283,17 +28755,6 @@
    },
    {
       "startDate": "4/6/19",
-      "startTime": "12:55",
-      "endDate": "4/6/19",
-      "endTime": "13:24",
-      "duration": 1727,
-      "energy": 13.24,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/6/19",
       "startTime": "13:39",
       "endDate": "4/6/19",
       "endTime": "14:10",
@@ -29459,17 +28920,6 @@
    },
    {
       "startDate": "4/7/19",
-      "startTime": "12:42",
-      "endDate": "4/7/19",
-      "endTime": "12:43",
-      "duration": 72,
-      "energy": 0.44,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "4/7/19",
       "startTime": "12:44",
       "endDate": "4/7/19",
       "endTime": "14:12",
@@ -29613,28 +29063,6 @@
    },
    {
       "startDate": "4/8/19",
-      "startTime": "16:24",
-      "endDate": "4/8/19",
-      "endTime": "16:54",
-      "duration": 1835,
-      "energy": 17.06,
-      "amount": 0.16,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/8/19",
-      "startTime": "17:17",
-      "endDate": "4/8/19",
-      "endTime": "17:45",
-      "duration": 1692,
-      "energy": 13.54,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/8/19",
       "startTime": "18:38",
       "endDate": "4/8/19",
       "endTime": "19:00",
@@ -29751,17 +29179,6 @@
       "duration": 1211,
       "energy": 10.71,
       "amount": 6.1,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/9/19",
-      "startTime": "18:04",
-      "endDate": "4/9/19",
-      "endTime": "18:34",
-      "duration": 1786,
-      "energy": 15.98,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -29976,17 +29393,6 @@
    },
    {
       "startDate": "4/11/19",
-      "startTime": "18:16",
-      "endDate": "4/11/19",
-      "endTime": "18:46",
-      "duration": 1766,
-      "energy": 14.47,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/11/19",
       "startTime": "19:40",
       "endDate": "4/11/19",
       "endTime": "20:11",
@@ -30053,17 +29459,6 @@
    },
    {
       "startDate": "4/12/19",
-      "startTime": "9:19",
-      "endDate": "4/12/19",
-      "endTime": "9:54",
-      "duration": 2086,
-      "energy": 22.32,
-      "amount": 1.5,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "4/12/19",
       "startTime": "10:45",
       "endDate": "4/12/19",
       "endTime": "11:11",
@@ -30116,17 +29511,6 @@
       "amount": 2.58,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "4/12/19",
-      "startTime": "15:08",
-      "endDate": "4/12/19",
-      "endTime": "15:37",
-      "duration": 1698,
-      "energy": 11.68,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "4/12/19",
@@ -30383,17 +29767,6 @@
    },
    {
       "startDate": "5/6/19",
-      "startTime": "11:43",
-      "endDate": "5/6/19",
-      "endTime": "12:13",
-      "duration": 1785,
-      "energy": 7.07,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "5/6/19",
       "startTime": "12:18",
       "endDate": "5/6/19",
       "endTime": "13:03",
@@ -30411,28 +29784,6 @@
       "duration": 1920,
       "energy": 11.26,
       "amount": 5.52,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "5/7/19",
-      "startTime": "6:00",
-      "endDate": "5/7/19",
-      "endTime": "6:30",
-      "duration": 1785,
-      "energy": 8.38,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "5/7/19",
-      "startTime": "8:21",
-      "endDate": "5/7/19",
-      "endTime": "8:42",
-      "duration": 1256,
-      "energy": 9.61,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -30658,17 +30009,6 @@
    },
    {
       "startDate": "5/31/19",
-      "startTime": "9:10",
-      "endDate": "5/31/19",
-      "endTime": "9:40",
-      "duration": 1784,
-      "energy": 18.79,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "5/31/19",
       "startTime": "10:32",
       "endDate": "5/31/19",
       "endTime": "10:57",
@@ -30688,17 +30028,6 @@
       "amount": 14.15,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "5/31/19",
-      "startTime": "15:00",
-      "endDate": "5/31/19",
-      "endTime": "15:30",
-      "duration": 1810,
-      "energy": 17.89,
-      "amount": 0.05,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "5/31/19",
@@ -30867,17 +30196,6 @@
    },
    {
       "startDate": "6/2/19",
-      "startTime": "13:16",
-      "endDate": "6/2/19",
-      "endTime": "13:45",
-      "duration": 1742,
-      "energy": 20.37,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/2/19",
       "startTime": "15:11",
       "endDate": "6/2/19",
       "endTime": "15:42",
@@ -30955,17 +30273,6 @@
    },
    {
       "startDate": "6/3/19",
-      "startTime": "19:02",
-      "endDate": "6/3/19",
-      "endTime": "19:32",
-      "duration": 1798,
-      "energy": 19.4,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/3/19",
       "startTime": "19:48",
       "endDate": "6/3/19",
       "endTime": "20:34",
@@ -30974,17 +30281,6 @@
       "amount": 4.98,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/4/19",
-      "startTime": "6:39",
-      "endDate": "6/4/19",
-      "endTime": "7:09",
-      "duration": 1826,
-      "energy": 19.15,
-      "amount": 0.15,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/4/19",
@@ -30999,28 +30295,6 @@
    },
    {
       "startDate": "6/4/19",
-      "startTime": "7:39",
-      "endDate": "6/4/19",
-      "endTime": "8:09",
-      "duration": 1785,
-      "energy": 19.71,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/4/19",
-      "startTime": "8:13",
-      "endDate": "6/4/19",
-      "endTime": "8:43",
-      "duration": 1828,
-      "energy": 17.85,
-      "amount": 0.15,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/4/19",
       "startTime": "9:11",
       "endDate": "6/4/19",
       "endTime": "9:49",
@@ -31029,17 +30303,6 @@
       "amount": 11.23,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/4/19",
-      "startTime": "9:51",
-      "endDate": "6/4/19",
-      "endTime": "10:17",
-      "duration": 1597,
-      "energy": 17.78,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/4/19",
@@ -31175,17 +30438,6 @@
    },
    {
       "startDate": "6/5/19",
-      "startTime": "11:18",
-      "endDate": "6/5/19",
-      "endTime": "11:46",
-      "duration": 1732,
-      "energy": 17.19,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/5/19",
       "startTime": "11:54",
       "endDate": "6/5/19",
       "endTime": "11:54",
@@ -31249,17 +30501,6 @@
       "amount": 2.17,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/5/19",
-      "startTime": "17:51",
-      "endDate": "6/5/19",
-      "endTime": "18:21",
-      "duration": 1791,
-      "energy": 13.39,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/5/19",
@@ -31425,17 +30666,6 @@
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/7/19",
-      "startTime": "13:57",
-      "endDate": "6/7/19",
-      "endTime": "14:27",
-      "duration": 1805,
-      "energy": 18.83,
-      "amount": 0.02,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/7/19",
@@ -31725,17 +30955,6 @@
    },
    {
       "startDate": "6/10/19",
-      "startTime": "8:07",
-      "endDate": "6/10/19",
-      "endTime": "8:38",
-      "duration": 1821,
-      "energy": 17.49,
-      "amount": 0.11,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/10/19",
       "startTime": "11:25",
       "endDate": "6/10/19",
       "endTime": "11:56",
@@ -31755,28 +30974,6 @@
       "amount": 1.57,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/10/19",
-      "startTime": "12:35",
-      "endDate": "6/10/19",
-      "endTime": "13:09",
-      "duration": 2038,
-      "energy": 19.31,
-      "amount": 1.1,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/10/19",
-      "startTime": "17:59",
-      "endDate": "6/10/19",
-      "endTime": "18:29",
-      "duration": 1792,
-      "energy": 12.01,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/10/19",
@@ -31912,28 +31109,6 @@
    },
    {
       "startDate": "6/11/19",
-      "startTime": "19:34",
-      "endDate": "6/11/19",
-      "endTime": "20:04",
-      "duration": 1795,
-      "energy": 15.65,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/11/19",
-      "startTime": "20:04",
-      "endDate": "6/11/19",
-      "endTime": "20:34",
-      "duration": 1795,
-      "energy": 9.61,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/11/19",
       "startTime": "22:00",
       "endDate": "6/11/19",
       "endTime": "22:15",
@@ -31975,17 +31150,6 @@
       "amount": 1.99,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/12/19",
-      "startTime": "13:47",
-      "endDate": "6/12/19",
-      "endTime": "14:15",
-      "duration": 1674,
-      "energy": 19.01,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/12/19",
@@ -32143,17 +31307,6 @@
    },
    {
       "startDate": "6/13/19",
-      "startTime": "18:18",
-      "endDate": "6/13/19",
-      "endTime": "18:48",
-      "duration": 1783,
-      "energy": 13.44,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/13/19",
       "startTime": "20:39",
       "endDate": "6/13/19",
       "endTime": "20:53",
@@ -32182,17 +31335,6 @@
       "duration": 832,
       "energy": 4.52,
       "amount": 2.44,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/14/19",
-      "startTime": "9:28",
-      "endDate": "6/14/19",
-      "endTime": "9:58",
-      "duration": 1801,
-      "energy": 19.34,
-      "amount": 0.01,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -32341,17 +31483,6 @@
    },
    {
       "startDate": "6/15/19",
-      "startTime": "12:33",
-      "endDate": "6/15/19",
-      "endTime": "13:03",
-      "duration": 1787,
-      "energy": 13.27,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/15/19",
       "startTime": "14:32",
       "endDate": "6/15/19",
       "endTime": "14:37",
@@ -32382,28 +31513,6 @@
       "amount": 6.59,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/15/19",
-      "startTime": "16:06",
-      "endDate": "6/15/19",
-      "endTime": "16:36",
-      "duration": 1789,
-      "energy": 16.14,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/15/19",
-      "startTime": "16:36",
-      "endDate": "6/15/19",
-      "endTime": "17:06",
-      "duration": 1787,
-      "energy": 9.94,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/15/19",
@@ -32448,17 +31557,6 @@
       "amount": 26.29,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/16/19",
-      "startTime": "8:56",
-      "endDate": "6/16/19",
-      "endTime": "9:26",
-      "duration": 1788,
-      "energy": 20.26,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/16/19",
@@ -32605,17 +31703,6 @@
    },
    {
       "startDate": "6/17/19",
-      "startTime": "13:31",
-      "endDate": "6/17/19",
-      "endTime": "14:01",
-      "duration": 1784,
-      "energy": 18.48,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/17/19",
       "startTime": "14:03",
       "endDate": "6/17/19",
       "endTime": "14:26",
@@ -32715,17 +31802,6 @@
    },
    {
       "startDate": "6/18/19",
-      "startTime": "6:30",
-      "endDate": "6/18/19",
-      "endTime": "7:00",
-      "duration": 1812,
-      "energy": 21.95,
-      "amount": 0.08,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/18/19",
       "startTime": "7:02",
       "endDate": "6/18/19",
       "endTime": "7:30",
@@ -32734,17 +31810,6 @@
       "amount": 5.93,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/18/19",
-      "startTime": "7:52",
-      "endDate": "6/18/19",
-      "endTime": "8:21",
-      "duration": 1776,
-      "energy": 14.39,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/18/19",
@@ -32822,28 +31887,6 @@
       "amount": 4.99,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/18/19",
-      "startTime": "20:46",
-      "endDate": "6/18/19",
-      "endTime": "21:15",
-      "duration": 1734,
-      "energy": 16.98,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/18/19",
-      "startTime": "21:16",
-      "endDate": "6/18/19",
-      "endTime": "21:30",
-      "duration": 862,
-      "energy": 4.68,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/18/19",
@@ -32968,17 +32011,6 @@
    },
    {
       "startDate": "6/19/19",
-      "startTime": "12:18",
-      "endDate": "6/19/19",
-      "endTime": "12:49",
-      "duration": 1809,
-      "energy": 19.97,
-      "amount": 0.05,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/19/19",
       "startTime": "13:59",
       "endDate": "6/19/19",
       "endTime": "14:38",
@@ -32987,28 +32019,6 @@
       "amount": 12.77,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/19/19",
-      "startTime": "15:01",
-      "endDate": "6/19/19",
-      "endTime": "15:31",
-      "duration": 1759,
-      "energy": 17.78,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/19/19",
-      "startTime": "16:21",
-      "endDate": "6/19/19",
-      "endTime": "17:11",
-      "duration": 3008,
-      "energy": 30.03,
-      "amount": 5.91,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/19/19",
@@ -33067,34 +32077,12 @@
    },
    {
       "startDate": "6/20/19",
-      "startTime": "12:41",
-      "endDate": "6/20/19",
-      "endTime": "13:10",
-      "duration": 1772,
-      "energy": 15.63,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/20/19",
       "startTime": "13:14",
       "endDate": "6/20/19",
       "endTime": "13:28",
       "duration": 831,
       "energy": 10.04,
       "amount": 4.92,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/20/19",
-      "startTime": "13:41",
-      "endDate": "6/20/19",
-      "endTime": "14:05",
-      "duration": 1455,
-      "energy": 14.8,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -33199,17 +32187,6 @@
    },
    {
       "startDate": "6/21/19",
-      "startTime": "10:30",
-      "endDate": "6/21/19",
-      "endTime": "10:59",
-      "duration": 1758,
-      "energy": 10.85,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/21/19",
       "startTime": "11:46",
       "endDate": "6/21/19",
       "endTime": "12:25",
@@ -33221,17 +32198,6 @@
    },
    {
       "startDate": "6/21/19",
-      "startTime": "12:27",
-      "endDate": "6/21/19",
-      "endTime": "12:58",
-      "duration": 1879,
-      "energy": 19.01,
-      "amount": 0.39,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/21/19",
       "startTime": "15:46",
       "endDate": "6/21/19",
       "endTime": "16:16",
@@ -33240,17 +32206,6 @@
       "amount": 1.14,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/21/19",
-      "startTime": "17:28",
-      "endDate": "6/21/19",
-      "endTime": "17:46",
-      "duration": 1059,
-      "energy": 12.92,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/21/19",
@@ -33441,17 +32396,6 @@
    },
    {
       "startDate": "6/24/19",
-      "startTime": "7:29",
-      "endDate": "6/24/19",
-      "endTime": "7:59",
-      "duration": 1791,
-      "energy": 8.45,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/24/19",
       "startTime": "8:31",
       "endDate": "6/24/19",
       "endTime": "9:02",
@@ -33460,17 +32404,6 @@
       "amount": 5.91,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/24/19",
-      "startTime": "9:40",
-      "endDate": "6/24/19",
-      "endTime": "10:09",
-      "duration": 1741,
-      "energy": 19.8,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/24/19",
@@ -33537,28 +32470,6 @@
       "amount": 4.11,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/25/19",
-      "startTime": "1:46",
-      "endDate": "6/25/19",
-      "endTime": "2:15",
-      "duration": 1755,
-      "energy": 17.87,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/25/19",
-      "startTime": "2:15",
-      "endDate": "6/25/19",
-      "endTime": "2:52",
-      "duration": 2217,
-      "energy": 6.11,
-      "amount": 0.62,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/25/19",
@@ -33738,17 +32649,6 @@
    },
    {
       "startDate": "6/26/19",
-      "startTime": "15:05",
-      "endDate": "6/26/19",
-      "endTime": "15:30",
-      "duration": 1476,
-      "energy": 17.07,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/26/19",
       "startTime": "18:46",
       "endDate": "6/26/19",
       "endTime": "18:56",
@@ -33826,45 +32726,12 @@
    },
    {
       "startDate": "6/27/19",
-      "startTime": "11:15",
-      "endDate": "6/27/19",
-      "endTime": "11:45",
-      "duration": 1805,
-      "energy": 16.1,
-      "amount": 0.02,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/27/19",
-      "startTime": "12:41",
-      "endDate": "6/27/19",
-      "endTime": "13:10",
-      "duration": 1754,
-      "energy": 11.87,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/27/19",
       "startTime": "15:45",
       "endDate": "6/27/19",
       "endTime": "16:12",
       "duration": 1662,
       "energy": 3.39,
       "amount": 1.66,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/27/19",
-      "startTime": "17:47",
-      "endDate": "6/27/19",
-      "endTime": "18:17",
-      "duration": 1783,
-      "energy": 13.55,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -33891,28 +32758,6 @@
       "paymentMode": "CREDITCARD"
    },
    {
-      "startDate": "6/27/19",
-      "startTime": "23:51",
-      "endDate": "6/28/19",
-      "endTime": "0:20",
-      "duration": 1778,
-      "energy": 19.34,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/28/19",
-      "startTime": "0:21",
-      "endDate": "6/28/19",
-      "endTime": "0:46",
-      "duration": 1493,
-      "energy": 6.7,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
       "startDate": "6/28/19",
       "startTime": "9:03",
       "endDate": "6/28/19",
@@ -33930,17 +32775,6 @@
       "endTime": "9:03",
       "duration": 10,
       "energy": 0,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/28/19",
-      "startTime": "9:04",
-      "endDate": "6/28/19",
-      "endTime": "9:30",
-      "duration": 1537,
-      "energy": 18.57,
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
@@ -34068,28 +32902,6 @@
    },
    {
       "startDate": "6/29/19",
-      "startTime": "3:07",
-      "endDate": "6/29/19",
-      "endTime": "3:36",
-      "duration": 1776,
-      "energy": 14.48,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/29/19",
-      "startTime": "3:37",
-      "endDate": "6/29/19",
-      "endTime": "4:07",
-      "duration": 1802,
-      "energy": 9.6,
-      "amount": 0.01,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "6/29/19",
       "startTime": "9:05",
       "endDate": "6/29/19",
       "endTime": "9:25",
@@ -34199,17 +33011,6 @@
       "paymentMode": "RFID"
    },
    {
-      "startDate": "6/29/19",
-      "startTime": "21:49",
-      "endDate": "6/29/19",
-      "endTime": "22:19",
-      "duration": 1798,
-      "energy": 13.44,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
       "startDate": "6/30/19",
       "startTime": "0:29",
       "endDate": "6/30/19",
@@ -34274,17 +33075,6 @@
       "amount": 5.37,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "6/30/19",
-      "startTime": "12:17",
-      "endDate": "6/30/19",
-      "endTime": "12:41",
-      "duration": 1434,
-      "energy": 14.22,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "6/30/19",
@@ -34393,17 +33183,6 @@
       "duration": 3542,
       "energy": 24.2,
       "amount": 13.07,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/1/19",
-      "startTime": "8:38",
-      "endDate": "7/1/19",
-      "endTime": "9:07",
-      "duration": 1745,
-      "energy": 17.97,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -34519,17 +33298,6 @@
    },
    {
       "startDate": "7/1/19",
-      "startTime": "19:16",
-      "endDate": "7/1/19",
-      "endTime": "19:47",
-      "duration": 1878,
-      "energy": 22.38,
-      "amount": 0.53,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/1/19",
       "startTime": "20:06",
       "endDate": "7/1/19",
       "endTime": "20:06",
@@ -34596,17 +33364,6 @@
    },
    {
       "startDate": "7/2/19",
-      "startTime": "11:43",
-      "endDate": "7/2/19",
-      "endTime": "12:10",
-      "duration": 1664,
-      "energy": 14.15,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/2/19",
       "startTime": "12:52",
       "endDate": "7/2/19",
       "endTime": "12:59",
@@ -34662,17 +33419,6 @@
    },
    {
       "startDate": "7/2/19",
-      "startTime": "18:13",
-      "endDate": "7/2/19",
-      "endTime": "18:42",
-      "duration": 1765,
-      "energy": 16.77,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/2/19",
       "startTime": "18:44",
       "endDate": "7/2/19",
       "endTime": "19:13",
@@ -34723,28 +33469,6 @@
       "duration": 1379,
       "energy": 5.01,
       "amount": 2.71,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/3/19",
-      "startTime": "0:46",
-      "endDate": "7/3/19",
-      "endTime": "1:16",
-      "duration": 1796,
-      "energy": 19.39,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/3/19",
-      "startTime": "1:16",
-      "endDate": "7/3/19",
-      "endTime": "2:07",
-      "duration": 3076,
-      "energy": 8.37,
-      "amount": 1.87,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -34915,17 +33639,6 @@
    },
    {
       "startDate": "7/4/19",
-      "startTime": "15:20",
-      "endDate": "7/4/19",
-      "endTime": "15:49",
-      "duration": 1761,
-      "energy": 10.08,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/4/19",
       "startTime": "17:08",
       "endDate": "7/4/19",
       "endTime": "17:39",
@@ -34937,56 +33650,12 @@
    },
    {
       "startDate": "7/4/19",
-      "startTime": "18:42",
-      "endDate": "7/4/19",
-      "endTime": "19:12",
-      "duration": 1801,
-      "energy": 14.32,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/4/19",
       "startTime": "23:04",
       "endDate": "7/5/19",
       "endTime": "0:12",
       "duration": 4096,
       "energy": 20.25,
       "amount": 10.94,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/5/19",
-      "startTime": "4:18",
-      "endDate": "7/5/19",
-      "endTime": "4:48",
-      "duration": 1808,
-      "energy": 16.33,
-      "amount": 0.04,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/5/19",
-      "startTime": "4:48",
-      "endDate": "7/5/19",
-      "endTime": "5:18",
-      "duration": 1792,
-      "energy": 10.85,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/5/19",
-      "startTime": "6:41",
-      "endDate": "7/5/19",
-      "endTime": "7:11",
-      "duration": 1811,
-      "energy": 15.64,
-      "amount": 0.05,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -35124,28 +33793,6 @@
    },
    {
       "startDate": "7/6/19",
-      "startTime": "3:33",
-      "endDate": "7/6/19",
-      "endTime": "4:03",
-      "duration": 1786,
-      "energy": 17.06,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/6/19",
-      "startTime": "4:03",
-      "endDate": "7/6/19",
-      "endTime": "4:23",
-      "duration": 1146,
-      "energy": 3.83,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/6/19",
       "startTime": "8:47",
       "endDate": "7/6/19",
       "endTime": "10:09",
@@ -35223,17 +33870,6 @@
    },
    {
       "startDate": "7/6/19",
-      "startTime": "18:40",
-      "endDate": "7/6/19",
-      "endTime": "19:00",
-      "duration": 1231,
-      "energy": 9.94,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/6/19",
       "startTime": "19:57",
       "endDate": "7/6/19",
       "endTime": "21:26",
@@ -35286,17 +33922,6 @@
       "amount": 1.2,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/7/19",
-      "startTime": "12:14",
-      "endDate": "7/7/19",
-      "endTime": "12:43",
-      "duration": 1746,
-      "energy": 20.59,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/7/19",
@@ -35372,17 +33997,6 @@
       "duration": 1877,
       "energy": 6.23,
       "amount": 3.36,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/8/19",
-      "startTime": "4:36",
-      "endDate": "7/8/19",
-      "endTime": "5:05",
-      "duration": 1795,
-      "energy": 14.8,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -35520,44 +34134,11 @@
    },
    {
       "startDate": "7/9/19",
-      "startTime": "3:46",
-      "endDate": "7/9/19",
-      "endTime": "4:16",
-      "duration": 1817,
-      "energy": 18.05,
-      "amount": 0.09,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/9/19",
-      "startTime": "4:17",
-      "endDate": "7/9/19",
-      "endTime": "4:47",
-      "duration": 1806,
-      "energy": 9.21,
-      "amount": 0.02,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/9/19",
       "startTime": "5:54",
       "endDate": "7/9/19",
       "endTime": "5:54",
       "duration": 7,
       "energy": 0,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/9/19",
-      "startTime": "5:55",
-      "endDate": "7/9/19",
-      "endTime": "6:20",
-      "duration": 1551,
-      "energy": 15.65,
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
@@ -35652,17 +34233,6 @@
    },
    {
       "startDate": "7/9/19",
-      "startTime": "16:08",
-      "endDate": "7/9/19",
-      "endTime": "16:42",
-      "duration": 2030,
-      "energy": 23.46,
-      "amount": 1.3,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/9/19",
       "startTime": "17:37",
       "endDate": "7/9/19",
       "endTime": "18:15",
@@ -35693,17 +34263,6 @@
       "amount": 4.58,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/10/19",
-      "startTime": "9:37",
-      "endDate": "7/10/19",
-      "endTime": "9:38",
-      "duration": 54,
-      "energy": 0.52,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/10/19",
@@ -35839,28 +34398,6 @@
    },
    {
       "startDate": "7/10/19",
-      "startTime": "19:59",
-      "endDate": "7/10/19",
-      "endTime": "20:29",
-      "duration": 1789,
-      "energy": 12.49,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/10/19",
-      "startTime": "20:29",
-      "endDate": "7/10/19",
-      "endTime": "20:59",
-      "duration": 1780,
-      "energy": 9.9,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/10/19",
       "startTime": "21:51",
       "endDate": "7/10/19",
       "endTime": "22:21",
@@ -35957,28 +34494,6 @@
       "amount": 3.74,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/12/19",
-      "startTime": "6:33",
-      "endDate": "7/12/19",
-      "endTime": "7:03",
-      "duration": 1786,
-      "energy": 20.54,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/12/19",
-      "startTime": "7:03",
-      "endDate": "7/12/19",
-      "endTime": "7:20",
-      "duration": 1017,
-      "energy": 5.63,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/12/19",
@@ -36111,17 +34626,6 @@
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/12/19",
-      "startTime": "17:08",
-      "endDate": "7/12/19",
-      "endTime": "18:02",
-      "duration": 3251,
-      "energy": 21.91,
-      "amount": 5.57,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/12/19",
@@ -36290,17 +34794,6 @@
    },
    {
       "startDate": "7/14/19",
-      "startTime": "7:58",
-      "endDate": "7/14/19",
-      "endTime": "8:28",
-      "duration": 1788,
-      "energy": 16.65,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/14/19",
       "startTime": "9:27",
       "endDate": "7/14/19",
       "endTime": "9:58",
@@ -36422,17 +34915,6 @@
    },
    {
       "startDate": "7/15/19",
-      "startTime": "11:50",
-      "endDate": "7/15/19",
-      "endTime": "12:19",
-      "duration": 1712,
-      "energy": 12.48,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/15/19",
       "startTime": "13:11",
       "endDate": "7/15/19",
       "endTime": "13:43",
@@ -36510,28 +34992,6 @@
    },
    {
       "startDate": "7/16/19",
-      "startTime": "9:46",
-      "endDate": "7/16/19",
-      "endTime": "10:16",
-      "duration": 1797,
-      "energy": 19.57,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/16/19",
-      "startTime": "10:16",
-      "endDate": "7/16/19",
-      "endTime": "10:46",
-      "duration": 1798,
-      "energy": 8.37,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/16/19",
       "startTime": "10:48",
       "endDate": "7/16/19",
       "endTime": "11:22",
@@ -36551,17 +35011,6 @@
       "amount": 6.08,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/16/19",
-      "startTime": "14:01",
-      "endDate": "7/16/19",
-      "endTime": "14:32",
-      "duration": 1829,
-      "energy": 17.12,
-      "amount": 0.13,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/16/19",
@@ -36598,17 +35047,6 @@
    },
    {
       "startDate": "7/16/19",
-      "startTime": "18:21",
-      "endDate": "7/16/19",
-      "endTime": "18:53",
-      "duration": 1870,
-      "energy": 22.29,
-      "amount": 0.48,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/16/19",
       "startTime": "19:39",
       "endDate": "7/16/19",
       "endTime": "20:11",
@@ -36617,28 +35055,6 @@
       "amount": 9.43,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/17/19",
-      "startTime": "7:08",
-      "endDate": "7/17/19",
-      "endTime": "7:38",
-      "duration": 1830,
-      "energy": 17.31,
-      "amount": 0.15,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/17/19",
-      "startTime": "7:39",
-      "endDate": "7/17/19",
-      "endTime": "8:12",
-      "duration": 1982,
-      "energy": 4.39,
-      "amount": 0.22,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/17/19",
@@ -36719,17 +35135,6 @@
    },
    {
       "startDate": "7/17/19",
-      "startTime": "16:00",
-      "endDate": "7/17/19",
-      "endTime": "17:11",
-      "duration": 4257,
-      "energy": 27.77,
-      "amount": 7.85,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/17/19",
       "startTime": "17:13",
       "endDate": "7/17/19",
       "endTime": "17:13",
@@ -36793,28 +35198,6 @@
       "amount": 8.48,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/18/19",
-      "startTime": "9:28",
-      "endDate": "7/18/19",
-      "endTime": "9:58",
-      "duration": 1788,
-      "energy": 20.31,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/18/19",
-      "startTime": "9:58",
-      "endDate": "7/18/19",
-      "endTime": "10:28",
-      "duration": 1785,
-      "energy": 8.25,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/18/19",
@@ -36884,17 +35267,6 @@
    },
    {
       "startDate": "7/18/19",
-      "startTime": "14:06",
-      "endDate": "7/18/19",
-      "endTime": "14:33",
-      "duration": 1622,
-      "energy": 18.77,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/18/19",
       "startTime": "16:41",
       "endDate": "7/18/19",
       "endTime": "17:00",
@@ -36947,17 +35319,6 @@
       "amount": 5.39,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/19/19",
-      "startTime": "6:48",
-      "endDate": "7/19/19",
-      "endTime": "7:18",
-      "duration": 1764,
-      "energy": 12.32,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/19/19",
@@ -37060,17 +35421,6 @@
    },
    {
       "startDate": "7/19/19",
-      "startTime": "19:42",
-      "endDate": "7/19/19",
-      "endTime": "19:51",
-      "duration": 572,
-      "energy": 4.05,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/19/19",
       "startTime": "21:29",
       "endDate": "7/19/19",
       "endTime": "21:51",
@@ -37101,28 +35451,6 @@
       "amount": 9.87,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/20/19",
-      "startTime": "8:34",
-      "endDate": "7/20/19",
-      "endTime": "9:04",
-      "duration": 1791,
-      "energy": 20.16,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/20/19",
-      "startTime": "9:04",
-      "endDate": "7/20/19",
-      "endTime": "9:35",
-      "duration": 1865,
-      "energy": 9.22,
-      "amount": 0.16,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/20/19",
@@ -37192,17 +35520,6 @@
    },
    {
       "startDate": "7/20/19",
-      "startTime": "18:26",
-      "endDate": "7/20/19",
-      "endTime": "18:56",
-      "duration": 1817,
-      "energy": 13.75,
-      "amount": 0.07,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/20/19",
       "startTime": "21:39",
       "endDate": "7/20/19",
       "endTime": "21:39",
@@ -37222,28 +35539,6 @@
       "amount": 6.28,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/21/19",
-      "startTime": "6:10",
-      "endDate": "7/21/19",
-      "endTime": "6:40",
-      "duration": 1812,
-      "energy": 18.75,
-      "amount": 0.07,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/21/19",
-      "startTime": "6:41",
-      "endDate": "7/21/19",
-      "endTime": "7:11",
-      "duration": 1787,
-      "energy": 5.88,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/21/19",
@@ -37390,28 +35685,6 @@
    },
    {
       "startDate": "7/22/19",
-      "startTime": "6:45",
-      "endDate": "7/22/19",
-      "endTime": "7:15",
-      "duration": 1790,
-      "energy": 20.82,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/22/19",
-      "startTime": "7:16",
-      "endDate": "7/22/19",
-      "endTime": "7:48",
-      "duration": 1931,
-      "energy": 9.75,
-      "amount": 0.36,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/22/19",
       "startTime": "8:36",
       "endDate": "7/22/19",
       "endTime": "9:01",
@@ -37442,17 +35715,6 @@
       "amount": 4.87,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/22/19",
-      "startTime": "10:59",
-      "endDate": "7/22/19",
-      "endTime": "11:29",
-      "duration": 1790,
-      "energy": 19.4,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/22/19",
@@ -37612,17 +35874,6 @@
       "startDate": "7/23/19",
       "startTime": "15:49",
       "endDate": "7/23/19",
-      "endTime": "16:19",
-      "duration": 1811,
-      "energy": 7.32,
-      "amount": 0.02,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/23/19",
-      "startTime": "15:49",
-      "endDate": "7/23/19",
       "endTime": "16:49",
       "duration": 3593,
       "energy": 0,
@@ -37715,17 +35966,6 @@
       "duration": 2042,
       "energy": 10.93,
       "amount": 5.9,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/24/19",
-      "startTime": "8:52",
-      "endDate": "7/24/19",
-      "endTime": "9:21",
-      "duration": 1746,
-      "energy": 20.78,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -37863,28 +36103,6 @@
    },
    {
       "startDate": "7/25/19",
-      "startTime": "10:13",
-      "endDate": "7/25/19",
-      "endTime": "10:43",
-      "duration": 1784,
-      "energy": 18.37,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/25/19",
-      "startTime": "10:43",
-      "endDate": "7/25/19",
-      "endTime": "11:09",
-      "duration": 1572,
-      "energy": 7.36,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/25/19",
       "startTime": "11:35",
       "endDate": "7/25/19",
       "endTime": "11:49",
@@ -37926,17 +36144,6 @@
       "amount": 8.09,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/25/19",
-      "startTime": "14:06",
-      "endDate": "7/25/19",
-      "endTime": "14:36",
-      "duration": 1803,
-      "energy": 18.82,
-      "amount": 0.02,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/25/19",
@@ -38006,28 +36213,6 @@
    },
    {
       "startDate": "7/26/19",
-      "startTime": "12:46",
-      "endDate": "7/26/19",
-      "endTime": "13:16",
-      "duration": 1790,
-      "energy": 16.15,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/26/19",
-      "startTime": "13:16",
-      "endDate": "7/26/19",
-      "endTime": "13:31",
-      "duration": 925,
-      "energy": 5.36,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/26/19",
       "startTime": "13:44",
       "endDate": "7/26/19",
       "endTime": "14:02",
@@ -38047,17 +36232,6 @@
       "amount": 3.19,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/26/19",
-      "startTime": "14:24",
-      "endDate": "7/26/19",
-      "endTime": "14:55",
-      "duration": 1810,
-      "energy": 18.77,
-      "amount": 0.05,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/26/19",
@@ -38138,28 +36312,6 @@
    },
    {
       "startDate": "7/27/19",
-      "startTime": "6:37",
-      "endDate": "7/27/19",
-      "endTime": "7:07",
-      "duration": 1801,
-      "energy": 15.6,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/27/19",
-      "startTime": "7:07",
-      "endDate": "7/27/19",
-      "endTime": "7:25",
-      "duration": 1042,
-      "energy": 2.78,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/27/19",
       "startTime": "11:12",
       "endDate": "7/27/19",
       "endTime": "11:22",
@@ -38177,17 +36329,6 @@
       "duration": 1877,
       "energy": 13.66,
       "amount": 6.69,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/27/19",
-      "startTime": "11:59",
-      "endDate": "7/27/19",
-      "endTime": "12:02",
-      "duration": 210,
-      "energy": 0.33,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -38234,17 +36375,6 @@
       "amount": 2.82,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "7/27/19",
-      "startTime": "16:14",
-      "endDate": "7/27/19",
-      "endTime": "16:44",
-      "duration": 1771,
-      "energy": 18.74,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "7/27/19",
@@ -38358,17 +36488,6 @@
    },
    {
       "startDate": "7/28/19",
-      "startTime": "15:04",
-      "endDate": "7/28/19",
-      "endTime": "15:34",
-      "duration": 1796,
-      "energy": 17.37,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/28/19",
       "startTime": "15:59",
       "endDate": "7/28/19",
       "endTime": "16:46",
@@ -38419,17 +36538,6 @@
       "duration": 704,
       "energy": 6.21,
       "amount": 3.54,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "7/29/19",
-      "startTime": "8:30",
-      "endDate": "7/29/19",
-      "endTime": "8:59",
-      "duration": 1789,
-      "energy": 20.29,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -39337,17 +37445,6 @@
    },
    {
       "startDate": "8/1/19",
-      "startTime": "11:31",
-      "endDate": "8/1/19",
-      "endTime": "12:01",
-      "duration": 1812,
-      "energy": 19.11,
-      "amount": 0.06,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/1/19",
       "startTime": "12:09",
       "endDate": "8/1/19",
       "endTime": "12:54",
@@ -39367,17 +37464,6 @@
       "amount": 7.26,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/1/19",
-      "startTime": "14:12",
-      "endDate": "8/1/19",
-      "endTime": "14:37",
-      "duration": 1456,
-      "energy": 15.83,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/1/19",
@@ -39642,17 +37728,6 @@
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/2/19",
-      "startTime": "7:00",
-      "endDate": "8/2/19",
-      "endTime": "7:28",
-      "duration": 1632,
-      "energy": 9.72,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/2/19",
@@ -39948,17 +38023,6 @@
       "duration": 10,
       "energy": 0,
       "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/2/19",
-      "startTime": "14:21",
-      "endDate": "8/2/19",
-      "endTime": "14:53",
-      "duration": 1885,
-      "energy": 21.79,
-      "amount": 0.48,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -40443,17 +38507,6 @@
       "duration": 16,
       "energy": 0,
       "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/4/19",
-      "startTime": "12:51",
-      "endDate": "8/4/19",
-      "endTime": "13:22",
-      "duration": 1812,
-      "energy": 17.31,
-      "amount": 0.06,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -41196,17 +39249,6 @@
    },
    {
       "startDate": "8/5/19",
-      "startTime": "14:41",
-      "endDate": "8/5/19",
-      "endTime": "15:01",
-      "duration": 1174,
-      "energy": 10.5,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/5/19",
       "startTime": "15:19",
       "endDate": "8/5/19",
       "endTime": "16:04",
@@ -41284,17 +39326,6 @@
    },
    {
       "startDate": "8/5/19",
-      "startTime": "20:10",
-      "endDate": "8/5/19",
-      "endTime": "20:40",
-      "duration": 1808,
-      "energy": 13.29,
-      "amount": 0.03,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/5/19",
       "startTime": "21:43",
       "endDate": "8/5/19",
       "endTime": "21:43",
@@ -41328,17 +39359,6 @@
    },
    {
       "startDate": "8/6/19",
-      "startTime": "5:54",
-      "endDate": "8/6/19",
-      "endTime": "6:20",
-      "duration": 1598,
-      "energy": 16.4,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/6/19",
       "startTime": "7:24",
       "endDate": "8/6/19",
       "endTime": "8:49",
@@ -41355,17 +39375,6 @@
       "endTime": "10:07",
       "duration": 6,
       "energy": 0,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/6/19",
-      "startTime": "10:07",
-      "endDate": "8/6/19",
-      "endTime": "10:37",
-      "duration": 1775,
-      "energy": 19.62,
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
@@ -41867,17 +39876,6 @@
    },
    {
       "startDate": "8/8/19",
-      "startTime": "13:47",
-      "endDate": "8/8/19",
-      "endTime": "14:17",
-      "duration": 1807,
-      "energy": 16.52,
-      "amount": 0.03,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/8/19",
       "startTime": "15:44",
       "endDate": "8/8/19",
       "endTime": "16:08",
@@ -41933,17 +39931,6 @@
    },
    {
       "startDate": "8/8/19",
-      "startTime": "17:13",
-      "endDate": "8/8/19",
-      "endTime": "17:43",
-      "duration": 1813,
-      "energy": 16.83,
-      "amount": 0.07,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/8/19",
       "startTime": "18:42",
       "endDate": "8/8/19",
       "endTime": "18:42",
@@ -41972,17 +39959,6 @@
       "duration": 1877,
       "energy": 9.33,
       "amount": 5.32,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/8/19",
-      "startTime": "19:55",
-      "endDate": "8/8/19",
-      "endTime": "20:19",
-      "duration": 1450,
-      "energy": 17.29,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -42071,17 +40047,6 @@
       "duration": 3270,
       "energy": 23.46,
       "amount": 12.67,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/9/19",
-      "startTime": "7:42",
-      "endDate": "8/9/19",
-      "endTime": "8:11",
-      "duration": 1756,
-      "energy": 17.64,
-      "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -42670,17 +40635,6 @@
    },
    {
       "startDate": "8/11/19",
-      "startTime": "11:44",
-      "endDate": "8/11/19",
-      "endTime": "12:14",
-      "duration": 1810,
-      "energy": 20.23,
-      "amount": 0.05,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/11/19",
       "startTime": "13:27",
       "endDate": "8/11/19",
       "endTime": "13:58",
@@ -42934,17 +40888,6 @@
    },
    {
       "startDate": "8/12/19",
-      "startTime": "7:50",
-      "endDate": "8/12/19",
-      "endTime": "8:20",
-      "duration": 1807,
-      "energy": 15.39,
-      "amount": 0.03,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/12/19",
       "startTime": "8:21",
       "endDate": "8/12/19",
       "endTime": "8:21",
@@ -43063,17 +41006,6 @@
       "amount": 3.45,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/12/19",
-      "startTime": "14:01",
-      "endDate": "8/12/19",
-      "endTime": "14:32",
-      "duration": 1811,
-      "energy": 13.77,
-      "amount": 0.04,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/12/19",
@@ -43836,17 +41768,6 @@
    },
    {
       "startDate": "8/15/19",
-      "startTime": "10:14",
-      "endDate": "8/15/19",
-      "endTime": "10:24",
-      "duration": 621,
-      "energy": 7.21,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/15/19",
       "startTime": "11:38",
       "endDate": "8/15/19",
       "endTime": "11:38",
@@ -44067,17 +41988,6 @@
    },
    {
       "startDate": "8/15/19",
-      "startTime": "16:47",
-      "endDate": "8/15/19",
-      "endTime": "17:17",
-      "duration": 1815,
-      "energy": 16.71,
-      "amount": 0.07,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/15/19",
       "startTime": "17:41",
       "endDate": "8/15/19",
       "endTime": "17:41",
@@ -44163,17 +42073,6 @@
       "amount": 4.35,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/16/19",
-      "startTime": "14:29",
-      "endDate": "8/16/19",
-      "endTime": "14:46",
-      "duration": 1022,
-      "energy": 12.5,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/16/19",
@@ -44435,17 +42334,6 @@
       "endTime": "19:48",
       "duration": 8,
       "energy": 0,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/16/19",
-      "startTime": "19:48",
-      "endDate": "8/16/19",
-      "endTime": "20:17",
-      "duration": 1773,
-      "energy": 14.51,
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
@@ -45343,17 +43231,6 @@
    },
    {
       "startDate": "8/21/19",
-      "startTime": "10:36",
-      "endDate": "8/21/19",
-      "endTime": "11:07",
-      "duration": 1819,
-      "energy": 20.59,
-      "amount": 0.11,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/21/19",
       "startTime": "11:16",
       "endDate": "8/21/19",
       "endTime": "11:24",
@@ -45404,17 +43281,6 @@
       "duration": 1225,
       "energy": 9.81,
       "amount": 4.81,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/21/19",
-      "startTime": "15:55",
-      "endDate": "8/21/19",
-      "endTime": "16:34",
-      "duration": 2333,
-      "energy": 21.57,
-      "amount": 2.41,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
    },
@@ -45519,28 +43385,6 @@
    },
    {
       "startDate": "8/22/19",
-      "startTime": "14:27",
-      "endDate": "8/22/19",
-      "endTime": "14:57",
-      "duration": 1793,
-      "energy": 17.52,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/22/19",
-      "startTime": "14:57",
-      "endDate": "8/22/19",
-      "endTime": "15:30",
-      "duration": 1949,
-      "energy": 9.49,
-      "amount": 0.36,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/22/19",
       "startTime": "16:37",
       "endDate": "8/22/19",
       "endTime": "17:08",
@@ -45560,28 +43404,6 @@
       "amount": 29.59,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/23/19",
-      "startTime": "6:23",
-      "endDate": "8/23/19",
-      "endTime": "6:53",
-      "duration": 1756,
-      "energy": 17.58,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/23/19",
-      "startTime": "6:55",
-      "endDate": "8/23/19",
-      "endTime": "7:26",
-      "duration": 1877,
-      "energy": 22.2,
-      "amount": 0.49,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/23/19",
@@ -45706,28 +43528,6 @@
    },
    {
       "startDate": "8/24/19",
-      "startTime": "13:37",
-      "endDate": "8/24/19",
-      "endTime": "14:06",
-      "duration": 1710,
-      "energy": 12.09,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/24/19",
-      "startTime": "14:06",
-      "endDate": "8/24/19",
-      "endTime": "14:37",
-      "duration": 1816,
-      "energy": 2.59,
-      "amount": 0.01,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/24/19",
       "startTime": "14:39",
       "endDate": "8/24/19",
       "endTime": "15:03",
@@ -45838,17 +43638,6 @@
    },
    {
       "startDate": "8/25/19",
-      "startTime": "14:36",
-      "endDate": "8/25/19",
-      "endTime": "15:06",
-      "duration": 1787,
-      "energy": 10.62,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/25/19",
       "startTime": "15:32",
       "endDate": "8/25/19",
       "endTime": "15:42",
@@ -45865,17 +43654,6 @@
       "endTime": "15:54",
       "duration": 7,
       "energy": 0,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/25/19",
-      "startTime": "15:55",
-      "endDate": "8/25/19",
-      "endTime": "16:20",
-      "duration": 1520,
-      "energy": 15.42,
       "amount": 0,
       "portType": "CHADEMO",
       "paymentMode": "RFID"
@@ -46055,17 +43833,6 @@
       "amount": 7.45,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/26/19",
-      "startTime": "21:07",
-      "endDate": "8/26/19",
-      "endTime": "21:37",
-      "duration": 1791,
-      "energy": 14.41,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/27/19",
@@ -46300,17 +44067,6 @@
    },
    {
       "startDate": "8/29/19",
-      "startTime": "8:56",
-      "endDate": "8/29/19",
-      "endTime": "9:12",
-      "duration": 918,
-      "energy": 9.92,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/29/19",
       "startTime": "9:46",
       "endDate": "8/29/19",
       "endTime": "9:46",
@@ -46410,17 +44166,6 @@
    },
    {
       "startDate": "8/29/19",
-      "startTime": "15:14",
-      "endDate": "8/29/19",
-      "endTime": "15:43",
-      "duration": 1738,
-      "energy": 17.15,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/29/19",
       "startTime": "18:00",
       "endDate": "8/29/19",
       "endTime": "18:44",
@@ -46429,28 +44174,6 @@
       "amount": 18.38,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/29/19",
-      "startTime": "19:42",
-      "endDate": "8/29/19",
-      "endTime": "20:12",
-      "duration": 1802,
-      "energy": 13.84,
-      "amount": 0.01,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/29/19",
-      "startTime": "20:13",
-      "endDate": "8/29/19",
-      "endTime": "20:26",
-      "duration": 790,
-      "energy": 1.67,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/29/19",
@@ -46484,17 +44207,6 @@
       "amount": 3.87,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/30/19",
-      "startTime": "11:34",
-      "endDate": "8/30/19",
-      "endTime": "12:03",
-      "duration": 1731,
-      "energy": 13.97,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    },
    {
       "startDate": "8/30/19",
@@ -46718,17 +44430,6 @@
    },
    {
       "startDate": "8/31/19",
-      "startTime": "16:17",
-      "endDate": "8/31/19",
-      "endTime": "16:39",
-      "duration": 1293,
-      "energy": 15.93,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
-   },
-   {
-      "startDate": "8/31/19",
       "startTime": "16:45",
       "endDate": "8/31/19",
       "endTime": "17:03",
@@ -46737,16 +44438,5 @@
       "amount": 3.83,
       "portType": "CHADEMO",
       "paymentMode": "CREDITCARD"
-   },
-   {
-      "startDate": "8/31/19",
-      "startTime": "20:26",
-      "endDate": "8/31/19",
-      "endTime": "20:54",
-      "duration": 1695,
-      "energy": 20.33,
-      "amount": 0,
-      "portType": "CHADEMO",
-      "paymentMode": "RFID"
    }
 ]

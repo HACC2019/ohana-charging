@@ -6,7 +6,6 @@
 //
 
 struct StationDataStruct: Codable{
-    
     let startDate : String
     let startTime: String
     let endDate : String
@@ -54,9 +53,4 @@ class StationData{
         self.portType = portType
         self.paymentMethod = paymentMethod
     }
-    
-    
- 
-    
-    
 }

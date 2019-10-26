@@ -8,6 +8,7 @@
 import UIKit
 class HomeVC: UIViewController {
     
+    static var stationClicked = ""
     var stationInfoA : [StationData] = []
     var stationInfoB : [StationData] = []
     var stations : [Any] = []
@@ -17,14 +18,15 @@ class HomeVC: UIViewController {
     var isSheetCreated = false
     var searching = false
     var selectedAverage = "session"
+    var stationWorking = true
     private let blackView = UIView()
     private let clearView = UIView()
-
+    
     let stationAFileName = "stationA"
     let stationBFileName = "stationB"
     let actionSheet = UIAlertController(title: "Averaging Options",
-    message: "Please select an averaging option to show",
-    preferredStyle: .actionSheet)
+                                        message: "Please select an averaging option to show",
+                                        preferredStyle: .actionSheet)
     
     @IBOutlet weak var optionsButton: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -46,8 +48,6 @@ class HomeVC: UIViewController {
         
         //This array is used in feed
         stations = [stationInfoA,stationInfoB]
-//        print("HELLO: \(stationInfoA[0].dollarAmount)")
-    
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -102,12 +102,12 @@ class HomeVC: UIViewController {
     
     private func createClearView(){
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(isMenuShowing))
-
+        
         //Create swipe left gesture
         swipeRight.direction = .right
         
         //Get current window
-        if let window = UIApplication.shared.keyWindow{
+        if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }){
             clearView.backgroundColor = UIColor.clear
             self.clearView.addGestureRecognizer(swipeRight)
             window.addSubview(clearView)
@@ -117,42 +117,41 @@ class HomeVC: UIViewController {
     }
     
     private func createBlackView(){
-           let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(isMenuShowing))
-           let tapGesture = UITapGestureRecognizer(target: self, action: #selector(isMenuShowing))
-           //Get nav bar height
-           let navBarHeight = self.navigationController?.navigationBar.frame.maxY ?? 0.0
-           
-           swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-           
-           //Get current window
-           if let window = UIApplication.shared.keyWindow{
-               
-               blackView.backgroundColor = UIColor.init(white: 0.0, alpha: 0.5)
-               
-               //Tap view and then dismiss it
-               blackView.addGestureRecognizer(tapGesture)
-               
-               //Swipe right and dimiss it
-               blackView.addGestureRecognizer(swipeLeft)
-
-               window.addSubview(blackView)
-               
-               blackView.frame = CGRect(x: tableView.frame.width,
-                                        y: 0.0 + navBarHeight,
-                                        width: window.frame.width,
-               
-                                        height: window.frame.height)
-               //Zero out
-               blackView.alpha = 0
-               
-               //Animate back to alpha 1
-               UIView.animate(withDuration: 0.2, animations:  {
-                   self.blackView.alpha = 1
-               })
-           }
-           
-           
-       }
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(isMenuShowing))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(isMenuShowing))
+        //Get nav bar height
+        let navBarHeight = self.navigationController?.navigationBar.frame.maxY ?? 0.0
+        
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        
+        //Get current window
+        if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }){
+            
+            blackView.backgroundColor = UIColor.init(white: 0.0, alpha: 0.5)
+            
+            //Tap view and then dismiss it
+            blackView.addGestureRecognizer(tapGesture)
+            
+            //Swipe right and dimiss it
+            blackView.addGestureRecognizer(swipeLeft)
+            
+            window.addSubview(blackView)
+            
+            blackView.frame = CGRect(x: tableView.frame.width,
+                                     y: 0.0 + navBarHeight,
+                                     width: window.frame.width,
+                                     height: window.frame.height)
+            //Zero out
+            blackView.alpha = 0
+            
+            //Animate back to alpha 1
+            UIView.animate(withDuration: 0.2, animations:  {
+                self.blackView.alpha = 1
+            })
+        }
+        
+        
+    }
     
     
     private func removeClearView(){
@@ -163,38 +162,37 @@ class HomeVC: UIViewController {
     
     //Detemine constraints based on if menu is showing or not
     @objc private func isMenuShowing(){
-          if menuShowing{
-              self.blackView.alpha = 0
-              tableLeadingConstraint.constant = -238.0
-              optionsButton.image = UIImage(named: "optionButton.png")
-              
-              
-          }else{
-              tableLeadingConstraint.constant = 0.0
-              optionsButton.image = UIImage(named: "closeButton.png")
-              createBlackView()
-          }
-          UIView.animate(withDuration: 0.3, animations:{
-              self.view.layoutIfNeeded()
-          })
-          menuShowing = !menuShowing
-      }
+        
+        if menuShowing{
+            self.blackView.alpha = 0
+            tableLeadingConstraint.constant = -238.0
+            optionsButton.image = UIImage(named: "optionButton.png")
+        }else{
+            tableLeadingConstraint.constant = 0.0
+            optionsButton.image = UIImage(named: "closeButton.png")
+            createBlackView()
+        }
+        UIView.animate(withDuration: 0.3, animations:{
+            self.view.layoutIfNeeded()
+        })
+        menuShowing = !menuShowing
+    }
     
     func navGoTo(_ view: String, animate: Bool){
-            OperationQueue.main.addOperation {
-                func topMostController() -> UIViewController {
-                    var topController: UIViewController = UIApplication.shared.keyWindow!.rootViewController!
-                    while (topController.presentedViewController != nil) {
-                        topController = topController.presentedViewController!
-                    }
-                    return topController
+        OperationQueue.main.addOperation {
+            func topMostController() -> UIViewController {
+                var topController: UIViewController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!.rootViewController!
+                while (topController.presentedViewController != nil) {
+                    topController = topController.presentedViewController!
                 }
-                if let second = topMostController().storyboard?.instantiateViewController(withIdentifier: view) {
-                    self.navigationController?.pushViewController(second, animated: animate)
-    
-                }
+                return topController
+            }
+            if let second = topMostController().storyboard?.instantiateViewController(withIdentifier: view) {
+                self.navigationController?.pushViewController(second, animated: animate)
+                
             }
         }
+    }
     
     func loadJSONData(_ name: String) -> Data?{
         if let path = Bundle.main.path(forResource: name, ofType: "json") {
@@ -215,15 +213,15 @@ class HomeVC: UIViewController {
             if let data = loadJSONData(name){
                 let station = try decoder.decode([StationDataStruct].self, from: data)
                 for data in station{
-                dataArray.append(StationData(startDate: data.startDate,
-                                                    startTime: data.startTime,
-                                                    endDate: data.endDate,
-                                                    endTime: data.endTime,
-                                                    duration: Int(data.duration) ,
-                                                    energy: Double(data.energy) ,
-                                                    dollarAmount: Double(data.dollarAmount) ,
-                                                    portType: data.portType,
-                                                    paymentMethod: data.paymentMethod))
+                    dataArray.append(StationData(startDate: data.startDate,
+                                                 startTime: data.startTime,
+                                                 endDate: data.endDate,
+                                                 endTime: data.endTime,
+                                                 duration: Int(data.duration) ,
+                                                 energy: Double(data.energy) ,
+                                                 dollarAmount: Double(data.dollarAmount) ,
+                                                 portType: data.portType,
+                                                 paymentMethod: data.paymentMethod))
                 }
             }
             return dataArray
@@ -231,8 +229,8 @@ class HomeVC: UIViewController {
             print("ERROR LOADING JSON: \(error)")
         }
         return dataArray
-      }
-
+    }
+    
     
     //Calculate type of average based on typeAverage
     //Return array = [averageType, carAverage,spentAvereage,energyAverage,durationAverage]
@@ -246,8 +244,8 @@ class HomeVC: UIViewController {
         var durationAverage = 0
         var previousDay = (array[0].endDate.split(separator: "/"))[1]
         var previousMonth = (array[0].endDate.split(separator: "/"))[0]
-
-           
+        
+        
         for data in array{
             
             //If daily average then calculate number of days
@@ -288,19 +286,42 @@ class HomeVC: UIViewController {
             spentAverage /= Double(array.count)
             energyAverage /= Double(array.count)
             durationAverage /= array.count
+            carAverage = 0
         }
-       
+        
         spentAverage = spentAverage.rounded(toPlaces: 2)
         energyAverage = energyAverage.rounded(toPlaces: 2)
-
-
-
+        
         output = ["\(typeAverage.capitalizingFirstLetter()) Average",String(carAverage),String(spentAverage),String(energyAverage),String(durationAverage)]
         return output
     }
     func secondsToHoursMinutes (seconds : Int) -> (Int, Int) {
-      return (seconds / 3600, (seconds % 3600) / 60)
+        return (seconds / 3600, (seconds % 3600) / 60)
     }
+    
+    //Push alert to user
+    static func alert(message: String, title: String = "", actionType: UIAlertAction.Style) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        HomeVC.topViewController()?.present(alert, animated: true, completion: nil)
+    }
+    
+    //Find top view controller
+    static func topViewController(base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+            return topViewController(base: selected)
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        
+        return base
+    }
+    
+    
 }
 
 //Collection View -> Showing the preview of the station data
@@ -322,7 +343,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StationCollectionViewCell
         var averageData : [String] = []
-    
+        
         //if searching use searchingStations array
         if searching{
             if selectedAverage == "session"{
@@ -333,7 +354,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
                 averageData = calculateAverage(array: searchingStations[indexPath.row] as! [StationData], typeAverage: "monthly")
             }
             
-        //elseuse stations array
+            //elseuse stations array
         }else{
             if selectedAverage == "session"{
                 averageData = calculateAverage(array: stations[indexPath.row] as! [StationData], typeAverage: "session")
@@ -345,25 +366,35 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         }
         //time.0 = hours, time.1 = min
         let time = secondsToHoursMinutes(seconds: Int(averageData[4]) ?? -1)
-                
+        
         cell.stationId.text = "Station ID: \(indexPath.row + 1)"
-        cell.stationImage.image = UIImage(named: "goodBatteryIcon.png")
+        cell.stationImage.image = UIImage(named: "evStation.png")
         cell.averageTitle.text = averageData[0]
-        if averageData[1].isEmpty {cell.averageCars.text = averageData[1]} //print nothing if empty
+        if averageData[1] == "0" {cell.averageCars.text = ""} //print nothing if empty
         else{cell.averageCars.text = "\(averageData[1]) cars"}
         cell.averageSpent.text = "$\(averageData[2])"
         cell.averageEnergy.text = "\(averageData[3]) kWh"
         cell.averageDuration.text = "\(time.0):\(time.1)"
+        
+        if stationWorking{
+            cell.stationStatus.textColor = UIColor.green
+            cell.stationStatus.text = "Status: Working"
+        }
+        else{
+            cell.stationStatus.textColor = UIColor.red
+            cell.stationStatus.text = "Status: Down"
+        }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         searchBar.endEditing(true) //when a cell is clicked hide keyboard
+        HomeVC.stationClicked = "Station: \(indexPath.row + 1)"
         navGoTo("DetailVC", animate: true)
     }
     
-
+    
 }
 
 //Table view -> This is sliding menu
@@ -392,7 +423,7 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource{
             print("Pressed About Us")
         default:
             print(-1)
-                
+            
         }
     }
     
@@ -406,8 +437,8 @@ extension HomeVC: UISearchBarDelegate{
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         //no matter if user types in caps or not it will search thats why we force to lowercase
-//        searchingStations = dictionary.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
-//        searchingStations = stations.filter({$0 == searchText})
+        //        searchingStations = dictionary.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        //        searchingStations = stations.filter({$0 == searchText})
         searching = true
         collectionView.reloadData()
     }

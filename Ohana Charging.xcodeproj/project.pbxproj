@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA1C6231236177890027F7BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1C6230236177890027F7BB /* Extensions.swift */; };
+		DA4A3E442369664200D7F1A0 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A3E432369664200D7F1A0 /* AboutVC.swift */; };
+		DA50F27023696AF300A2260A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50F26F23696AF300A2260A /* Reachability.swift */; };
 		DA5664DB235C180500ABD256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5664DA235C180500ABD256 /* AppDelegate.swift */; };
 		DA5664DD235C180500ABD256 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5664DC235C180500ABD256 /* SceneDelegate.swift */; };
 		DA5664DF235C180500ABD256 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5664DE235C180500ABD256 /* HomeVC.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		DA1C6230236177890027F7BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DA4A3E432369664200D7F1A0 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		DA50F26F23696AF300A2260A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DA5664D7235C180500ABD256 /* Ohana Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ohana Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5664DA235C180500ABD256 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5664DC235C180500ABD256 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		DA50F26E23696AD700A2260A /* Internet Connection */ = {
+			isa = PBXGroup;
+			children = (
+				DA50F26F23696AF300A2260A /* Reachability.swift */,
+			);
+			path = "Internet Connection";
+			sourceTree = "<group>";
+		};
 		DA5664CE235C180500ABD256 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +97,7 @@
 				DA5664DA235C180500ABD256 /* AppDelegate.swift */,
 				DA5664DC235C180500ABD256 /* SceneDelegate.swift */,
 				DA5664E8235C180700ABD256 /* Info.plist */,
+				DA50F26E23696AD700A2260A /* Internet Connection */,
 				DA87D8AA235EEB36002BA85A /* JSON */,
 				DA5664F0235C185600ABD256 /* Model */,
 				DA5664EF235C184D00ABD256 /* Controller */,
@@ -129,6 +142,7 @@
 				DA5664F2235C1C8B00ABD256 /* InitialVC.swift */,
 				DA5664DE235C180500ABD256 /* HomeVC.swift */,
 				DA87D8AF235EED78002BA85A /* DetailVC.swift */,
+				DA4A3E432369664200D7F1A0 /* AboutVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -232,6 +246,7 @@
 			files = (
 				DA5664DF235C180500ABD256 /* HomeVC.swift in Sources */,
 				DA1C6231236177890027F7BB /* Extensions.swift in Sources */,
+				DA50F27023696AF300A2260A /* Reachability.swift in Sources */,
 				DA5664F3235C1C8B00ABD256 /* InitialVC.swift in Sources */,
 				DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */,
 				DA5664DB235C180500ABD256 /* AppDelegate.swift in Sources */,
@@ -240,6 +255,7 @@
 				DA5664DD235C180500ABD256 /* SceneDelegate.swift in Sources */,
 				DA5664F8235C1FE000ABD256 /* MainNavVC.swift in Sources */,
 				DA87D8B0235EED78002BA85A /* DetailVC.swift in Sources */,
+				DA4A3E442369664200D7F1A0 /* AboutVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

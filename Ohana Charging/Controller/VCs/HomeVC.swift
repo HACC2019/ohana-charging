@@ -11,8 +11,8 @@ class HomeVC: UIViewController {
     static var stationClicked = ""
     var stationInfoA : [StationData] = []
     var stationInfoB : [StationData] = []
-    var stations : [Any] = []
-    var searchingStations : [Any] = []
+    var displayDict : [String : [StationData]] = [:]
+    var searchingDict : [String : [StationData]] = [:]
     var settingsLabels = ["Contact Us", "About Us"]
     var menuShowing = false
     var isSheetCreated = false
@@ -35,6 +35,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
@@ -45,8 +46,12 @@ class HomeVC: UIViewController {
         stationInfoA = loadStationData(name: stationAFileName)
         stationInfoB = loadStationData(name: stationBFileName)
         
-        //This array is used in feed
-        stations = [stationInfoA,stationInfoB]
+        //This dict is used in feed
+        displayDict["A"] = stationInfoA
+        displayDict["B"] = stationInfoB
+
+
+
         
     }
     
@@ -162,7 +167,6 @@ class HomeVC: UIViewController {
     
     //Detemine constraints based on if menu is showing or not
     @objc private func isMenuShowing(){
-        
         if menuShowing{
             self.blackView.alpha = 0
             tableLeadingConstraint.constant = -238.0
@@ -335,8 +339,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     
     //Number of cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searching{return searchingStations.count}
-        else{return stations.count}
+        if searching{return searchingDict.count}
+        else{return displayDict.count}
     }
     
     //Cell properties
@@ -346,28 +350,30 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         
         //if searching use searchingStations array
         if searching{
+            print("BEEP")
+            cell.stationId.text = "Station ID: \(Array(searchingDict.keys)[indexPath.row])"
             if selectedAverage == "session"{
-                averageData = calculateAverage(array: searchingStations[indexPath.row] as! [StationData], typeAverage: "session")
+                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "session")
             }else if selectedAverage == "daily"{
-                averageData = calculateAverage(array: searchingStations[indexPath.row] as! [StationData], typeAverage: "daily")
+                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "daily")
             }else{ //monthly
-                averageData = calculateAverage(array: searchingStations[indexPath.row] as! [StationData], typeAverage: "monthly")
+                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "monthly")
             }
             
             //elseuse stations array
         }else{
+            cell.stationId.text = "Station ID: \(Array(displayDict.keys)[indexPath.row])"
             if selectedAverage == "session"{
-                averageData = calculateAverage(array: stations[indexPath.row] as! [StationData], typeAverage: "session")
+                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row] , typeAverage: "session")
             }else if selectedAverage == "daily"{
-                averageData = calculateAverage(array: stations[indexPath.row] as! [StationData], typeAverage: "daily")
+                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row], typeAverage: "daily")
             }else{ //monthly
-                averageData = calculateAverage(array: stations[indexPath.row] as! [StationData], typeAverage: "monthly")
+                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row], typeAverage: "monthly")
             }
         }
         //time.0 = hours, time.1 = min
         let time = secondsToHoursMinutes(seconds: Int(averageData[4]) ?? -1)
         
-        cell.stationId.text = "Station ID: \(indexPath.row + 1)"
         cell.stationImage.image = UIImage(named: "evStation.png")
         cell.averageTitle.text = averageData[0]
         if averageData[1] == "0" {cell.averageCars.text = ""} //print nothing if empty
@@ -390,7 +396,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         searchBar.endEditing(true) //when a cell is clicked hide keyboard
-        HomeVC.stationClicked = "Station: \(indexPath.row + 1)"
+        HomeVC.stationClicked = "Station: \(Array(displayDict.keys)[indexPath.row])"
         navGoTo("DetailVC", animate: true)
     }
     
@@ -420,25 +426,31 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource{
         case "Contact Us":
             print("Pressed Contact Us")
         case "About Us":
+            navGoTo("AboutVC", animate: true)
             print("Pressed About Us")
         default:
             print(-1)
             
         }
+        
+        //Close menu
+        isMenuShowing()
+
     }
     
 }
 extension HomeVC: UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("BEEP")
         searching = false
         searchBar.endEditing(true) // gets rid of keyboard
         searchBar.text = ""
         collectionView.reloadData()
     }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //no matter if user types in caps or not it will search thats why we force to lowercase
-        //        searchingStations = dictionary.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
-//        searchingStations = stations.filter({$0 == searchText})
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {        
+        //Filer based on search results
+        searchingDict = displayDict.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        print("SEARCH \(searchingDict.count)")
         searching = true
         collectionView.reloadData()
     }

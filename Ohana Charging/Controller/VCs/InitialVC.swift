@@ -10,7 +10,6 @@ class InitialVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         goTo("MainNavVC", animate: true)
     }
     

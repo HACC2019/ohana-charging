@@ -46,13 +46,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Station ID" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-oA-Qjh">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Station ID" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-oA-Qjh">
                                 <rect key="frame" x="0.0" y="99" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="DQ7-DQ-m2L"/>
                                     <constraint firstAttribute="height" constant="44" id="NgK-ca-grm"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="w85-U7-mko"/>
+                                </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-ur-T3R">
                                 <rect key="frame" x="0.0" y="143" width="414" height="753"/>
@@ -268,6 +271,51 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="138.61607142857142"/>
         </scene>
+        <!--About Us-->
+        <scene sceneID="T3T-v5-kkB">
+            <objects>
+                <viewController storyboardIdentifier="AboutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tpw-n7-y6S" customClass="AboutVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UZe-Mr-4rk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-KM-Ima">
+                                <rect key="frame" x="39" y="368.5" width="336" height="159"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="SHV-UM-xoY"/>
+                                    <constraint firstAttribute="height" constant="159" id="leA-j1-S9H"/>
+                                </constraints>
+                                <string key="text">Team Members:                                    (Hawai'i Pacific University Students)                                                                                      Zachary A. Kline (Team Leader)              Benie Agonoy                                                                          Tan Hua                                            Wesley O'Neill                             </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nfx-KM-Ima" firstAttribute="centerY" secondItem="UZe-Mr-4rk" secondAttribute="centerY" id="Ffs-Mp-iCg"/>
+                            <constraint firstItem="nfx-KM-Ima" firstAttribute="centerX" secondItem="UZe-Mr-4rk" secondAttribute="centerX" id="kLt-Jp-UP1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x7Q-So-TLf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="9Et-vK-Ekj">
+                        <barButtonItem key="backBarButtonItem" title=" " id="71h-yE-nKu"/>
+                        <barButtonItem key="rightBarButtonItem" image="websiteIcon" id="Pad-Aw-pnU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="websitePressed:" destination="tpw-n7-y6S" id="7na-z5-7kv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="nfx-KM-Ima" id="Atj-OC-doq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDi-QW-FDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.6231884057972" y="818.97321428571422"/>
+        </scene>
         <!--DetailVC-->
         <scene sceneID="lBf-oM-vdD">
             <objects>
@@ -325,5 +373,6 @@
         <image name="justIcon" width="666.66668701171875" height="666.66668701171875"/>
         <image name="optionButton" width="40" height="40"/>
         <image name="refreshIcon" width="26.666666030883789" height="26"/>
+        <image name="websiteIcon" width="33.333332061767578" height="33.333332061767578"/>
     </resources>
 </document>

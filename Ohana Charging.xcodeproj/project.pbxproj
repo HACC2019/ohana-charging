@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BE1965DF0F78F10C94646E7 /* Pods_Ohana_Charging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F6E91E0BA8FA007E8EC055 /* Pods_Ohana_Charging.framework */; };
 		DA1C6231236177890027F7BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1C6230236177890027F7BB /* Extensions.swift */; };
 		DA4A3E442369664200D7F1A0 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A3E432369664200D7F1A0 /* AboutVC.swift */; };
 		DA50F27023696AF300A2260A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50F26F23696AF300A2260A /* Reachability.swift */; };
@@ -27,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		570EDB9C1B6A8A38499D2AFF /* Pods-Ohana Charging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ohana Charging.release.xcconfig"; path = "Target Support Files/Pods-Ohana Charging/Pods-Ohana Charging.release.xcconfig"; sourceTree = "<group>"; };
+		5868129C3EB49BB117423B0F /* Pods-Ohana Charging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ohana Charging.debug.xcconfig"; path = "Target Support Files/Pods-Ohana Charging/Pods-Ohana Charging.debug.xcconfig"; sourceTree = "<group>"; };
+		B6F6E91E0BA8FA007E8EC055 /* Pods_Ohana_Charging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ohana_Charging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1C6230236177890027F7BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DA4A3E432369664200D7F1A0 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		DA50F26F23696AF300A2260A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -53,12 +57,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE1965DF0F78F10C94646E7 /* Pods_Ohana_Charging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A64FF964B2B745D11B31FB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5868129C3EB49BB117423B0F /* Pods-Ohana Charging.debug.xcconfig */,
+				570EDB9C1B6A8A38499D2AFF /* Pods-Ohana Charging.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3B4B1A547EE39D49228DAE3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F6E91E0BA8FA007E8EC055 /* Pods_Ohana_Charging.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA1C622F2361777C0027F7BB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +103,8 @@
 			children = (
 				DA5664D9235C180500ABD256 /* Ohana Charging */,
 				DA5664D8235C180500ABD256 /* Products */,
+				1A64FF964B2B745D11B31FB8 /* Pods */,
+				3B4B1A547EE39D49228DAE3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA5664EB235C180700ABD256 /* Build configuration list for PBXNativeTarget "Ohana Charging" */;
 			buildPhases = (
+				5DEA190030032720243E06BB /* [CP] Check Pods Manifest.lock */,
 				DA5664D3235C180500ABD256 /* Sources */,
 				DA5664D4235C180500ABD256 /* Frameworks */,
 				DA5664D5235C180500ABD256 /* Resources */,
+				E25EBBD4E2BC7124E9E2F3D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +265,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DEA190030032720243E06BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ohana Charging-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E25EBBD4E2BC7124E9E2F3D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ohana Charging/Pods-Ohana Charging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ohana Charging/Pods-Ohana Charging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ohana Charging/Pods-Ohana Charging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA5664D3235C180500ABD256 /* Sources */ = {
@@ -397,6 +466,7 @@
 		};
 		DA5664EC235C180700ABD256 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5868129C3EB49BB117423B0F /* Pods-Ohana Charging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +486,7 @@
 		};
 		DA5664ED235C180700ABD256 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 570EDB9C1B6A8A38499D2AFF /* Pods-Ohana Charging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

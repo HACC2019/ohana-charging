@@ -11,6 +11,7 @@ class HomeVC: UIViewController {
     static var stationClicked = ""
     var stationInfoA : [StationData] = []
     var stationInfoB : [StationData] = []
+    static var clickedStation : [StationData] = []
     var displayDict : [String : [StationData]] = [:]
     var searchingDict : [String : [StationData]] = [:]
     var settingsLabels = ["Contact Us", "About Us"]
@@ -240,30 +241,32 @@ class HomeVC: UIViewController {
     //Return array = [averageType, carAverage,spentAvereage,energyAverage,durationAverage]
     private func calculateAverage(array: [StationData], typeAverage: String) -> [String]{
         var output : [String] = []
+        var monthYearArray = [String]() // mm/yy
+        var monthDayYearArray = [String]() // mm/dd/yy
         var numDays = 0
         var numMonths = 0
         var carAverage = 0
         var spentAverage = 0.0
         var energyAverage = 0.0
         var durationAverage = 0
-        var previousDay = (array[0].endDate.split(separator: "/"))[1]
-        var previousMonth = (array[0].endDate.split(separator: "/"))[0]
-        
+
         
         for data in array{
-            
+            let monthDayYearItems = data.endDate.split(separator: "/")
+            let monthYear = "\(monthDayYearItems[0])/\(monthDayYearItems[2])"
+            let monthDayYear = "\(monthDayYearItems[0])/\(monthDayYearItems[1])/\(monthDayYearItems[2])"
             //If daily average then calculate number of days
             if typeAverage == "daily"{
-                let day = (data.endDate.split(separator: "/"))[1]
-                if(previousDay != day) {
-                    previousDay = day
+                if(!monthDayYearArray.contains(monthDayYear)){
                     numDays += 1
+                    monthDayYearArray.append(monthDayYear)
+//                    print(monthDayYear)
                 }
+
             }else if typeAverage == "monthly"{
-                let month = (data.endDate.split(separator: "/"))[0]
-                if(previousMonth != month) {
-                    previousMonth = month
+                if(!monthYearArray.contains(monthYear)) {
                     numMonths += 1
+                    monthYearArray.append(monthYear)
                 }
             }
             
@@ -273,6 +276,11 @@ class HomeVC: UIViewController {
             durationAverage += data.duration
         }
         
+
+        //Used to check that there are no duplicates
+//        print(monthYearArray)
+//        print("MONTHS \(numMonths)")
+
         if typeAverage == "daily"{
             //Divide by total days to calc average
             carAverage /= numDays
@@ -295,6 +303,7 @@ class HomeVC: UIViewController {
         
         spentAverage = spentAverage.rounded(toPlaces: 2)
         energyAverage = energyAverage.rounded(toPlaces: 2)
+        
         
         output = ["\(typeAverage.capitalizingFirstLetter()) Average",String(carAverage),String(spentAverage),String(energyAverage),String(durationAverage)]
         return output
@@ -350,7 +359,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         
         //if searching use searchingStations array
         if searching{
-            print("BEEP")
+//            print("BEEP")
             cell.stationId.text = "Station ID: \(Array(searchingDict.keys)[indexPath.row])"
             if selectedAverage == "session"{
                 averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "session")
@@ -396,7 +405,20 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         searchBar.endEditing(true) //when a cell is clicked hide keyboard
-        HomeVC.stationClicked = "Station: \(Array(displayDict.keys)[indexPath.row])"
+        if searching{
+            
+            //Display station name
+            HomeVC.stationClicked = "Station: \(Array(searchingDict.keys)[indexPath.row])"
+            
+            //Store clicked station to use on DeatailVC
+            HomeVC.clickedStation = Array(searchingDict.values)[indexPath.row]
+            
+        }else{
+            HomeVC.stationClicked = "Station: \(Array(displayDict.keys)[indexPath.row])"
+            HomeVC.clickedStation = Array(displayDict.values)[indexPath.row]
+            
+        }
+        
         navGoTo("DetailVC", animate: true)
     }
     
@@ -450,7 +472,7 @@ extension HomeVC: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {        
         //Filer based on search results
         searchingDict = displayDict.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
-        print("SEARCH \(searchingDict.count)")
+//        print("SEARCH \(searchingDict.count)")
         searching = true
         collectionView.reloadData()
     }

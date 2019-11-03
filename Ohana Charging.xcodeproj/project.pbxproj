@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		DA87D8B3235EEE26002BA85A /* StationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8B2235EEE26002BA85A /* StationCollectionViewCell.swift */; };
 		DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8B4235EEE48002BA85A /* StationData.swift */; };
 		DAA496762361797200D17F56 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA496752361797200D17F56 /* Station.swift */; };
+		DABDBE0C236E5C47005FF8C9 /* CongestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDBE0B236E5C47005FF8C9 /* CongestionVC.swift */; };
 		DACB166C236404CD0070A3BE /* stationB.json in Resources */ = {isa = PBXBuildFile; fileRef = DACB166A236404CD0070A3BE /* stationB.json */; };
 		DACB166D236404CD0070A3BE /* stationA.json in Resources */ = {isa = PBXBuildFile; fileRef = DACB166B236404CD0070A3BE /* stationA.json */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		DA87D8B2235EEE26002BA85A /* StationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA87D8B4235EEE48002BA85A /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
 		DAA496752361797200D17F56 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		DABDBE0B236E5C47005FF8C9 /* CongestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongestionVC.swift; sourceTree = "<group>"; };
 		DACB166A236404CD0070A3BE /* stationB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationB.json; sourceTree = "<group>"; };
 		DACB166B236404CD0070A3BE /* stationA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationA.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +72,6 @@
 				5868129C3EB49BB117423B0F /* Pods-Ohana Charging.debug.xcconfig */,
 				570EDB9C1B6A8A38499D2AFF /* Pods-Ohana Charging.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -165,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5664F2235C1C8B00ABD256 /* InitialVC.swift */,
+				DABDBE0B236E5C47005FF8C9 /* CongestionVC.swift */,
 				DA5664DE235C180500ABD256 /* HomeVC.swift */,
 				DA87D8AF235EED78002BA85A /* DetailVC.swift */,
 				DA4A3E432369664200D7F1A0 /* AboutVC.swift */,
@@ -318,6 +320,7 @@
 				DA50F27023696AF300A2260A /* Reachability.swift in Sources */,
 				DA5664F3235C1C8B00ABD256 /* InitialVC.swift in Sources */,
 				DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */,
+				DABDBE0C236E5C47005FF8C9 /* CongestionVC.swift in Sources */,
 				DA5664DB235C180500ABD256 /* AppDelegate.swift in Sources */,
 				DA87D8B3235EEE26002BA85A /* StationCollectionViewCell.swift in Sources */,
 				DAA496762361797200D17F56 /* Station.swift in Sources */,

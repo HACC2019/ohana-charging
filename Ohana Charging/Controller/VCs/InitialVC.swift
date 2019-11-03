@@ -8,15 +8,24 @@
 import UIKit
 class InitialVC: UIViewController{
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        goTo("MainNavVC", animate: true)
+        
+        //If this is not the first time opening app
+        if InitialVC.isKeyPresentInUserDefaults(key: "firstOpen"){
+            InitialVC.goTo("MainNavVC", animate: true)
+        }else{
+             InitialVC.goTo("CongestionVC", animate: true)
+        }
+       
     }
     
+  
 
     
     //Help Direct Initial VC to Navigation Controller
-    func goTo(_ view: String, animate: Bool){
+    static func goTo(_ view: String, animate: Bool){
         OperationQueue.main.addOperation {
             func topMostController() -> UIViewController {
                 var topController: UIViewController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!.rootViewController!
@@ -31,5 +40,9 @@ class InitialVC: UIViewController{
                 
             }
         }
+    }
+    
+    static func isKeyPresentInUserDefaults(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
     }
 }

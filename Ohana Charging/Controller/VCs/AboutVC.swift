@@ -17,12 +17,12 @@ class AboutVC: UIViewController{
     
 
     @IBAction func websitePressed(_ sender: Any) {
-        openHACC()
+        AboutVC.loadWebsite(url: "http://hacc.hawaii.gov")
     }
     
-    func openHACC(){
+    static func loadWebsite(url: String){
         if Reachability.isConnectedToNetwork(){
-            UIApplication.shared.open(URL(string: "http://hacc.hawaii.gov")!, options: [:], completionHandler: nil)
+            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
         }else{
             HomeVC.alert(message: "There is no internet connection. Please check your internet connection and try again.",
                          title: "Connection Error", actionType: .default)

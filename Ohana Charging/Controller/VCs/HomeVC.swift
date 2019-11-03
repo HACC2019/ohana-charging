@@ -14,7 +14,8 @@ class HomeVC: UIViewController {
     static var clickedStation : [StationData] = []
     var displayDict : [String : [StationData]] = [:]
     var searchingDict : [String : [StationData]] = [:]
-    var settingsLabels = ["Contact Us", "About Us"]
+    var settingsLabels = ["Change Congestion","Contact Us", "About Us"]
+    var settingsImages = [UIImage(named: "congestionIcon"),UIImage(named: "contactIcon"),UIImage(named: "aboutIcon")]
     var menuShowing = false
     var isSheetCreated = false
     var searching = false
@@ -22,6 +23,7 @@ class HomeVC: UIViewController {
     var stationWorking = true
     private let blackView = UIView()
     private let clearView = UIView()
+    private var isStationCongested = false
     let stationAFileName = "stationA"
     let stationBFileName = "stationB"
     let actionSheet = UIAlertController(title: "Averaging Options",
@@ -47,12 +49,12 @@ class HomeVC: UIViewController {
         stationInfoA = loadStationData(name: stationAFileName)
         stationInfoB = loadStationData(name: stationBFileName)
         
-        //This dict is used in feed
+        //This dict is used in feed, this is setting items in dict
         displayDict["A"] = stationInfoA
         displayDict["B"] = stationInfoB
-
-
-
+//        selectedAverage = "daily"
+        
+        print("Congested Num Selected: \(UserDefaults.standard.integer(forKey: "congestNum"))")
         
     }
     
@@ -83,19 +85,22 @@ class HomeVC: UIViewController {
     
     private func presentSheet(){
         if !isSheetCreated{
-            actionSheet.addAction(UIAlertAction(title: "Session Average", style: .default, handler: { (_) in
-                self.selectedAverage = "session"
-                self.collectionView.reloadData()
-            }))
+            
             actionSheet.addAction(UIAlertAction(title: "Daily Average", style: .default, handler: { (_) in
                 self.selectedAverage = "daily"
                 self.collectionView.reloadData()
             }))
             actionSheet.addAction(UIAlertAction(title: "Monthly Average", style: .default, handler: { (_) in
+                
                 self.selectedAverage = "monthly"
                 self.collectionView.reloadData()
             }))
-            
+                       
+            actionSheet.addAction(UIAlertAction(title: "Session Average", style: .default, handler: { (_) in
+                self.selectedAverage = "session"
+                self.collectionView.reloadData()
+            }))
+           
             //close alert
             actionSheet.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { (_) in
                 self.actionSheet.dismiss(animated: true, completion: nil)
@@ -287,6 +292,8 @@ class HomeVC: UIViewController {
             spentAverage /= Double(numDays)
             energyAverage /= Double(numDays)
             durationAverage /= numDays
+            
+            
         }else if typeAverage == "monthly"{
             //Divide by total months to calc average
             carAverage /= numMonths
@@ -299,6 +306,13 @@ class HomeVC: UIViewController {
             energyAverage /= Double(array.count)
             durationAverage /= array.count
             carAverage = 0
+            
+            //If daily duration is greater or equal to the selected congestedNum
+            //Then station is congested
+            if(secondsToMinutes(seconds: durationAverage) >= UserDefaults.standard.integer(forKey: "congestNum")){
+                isStationCongested = true
+            }
+            
         }
         
         spentAverage = spentAverage.rounded(toPlaces: 2)
@@ -310,6 +324,10 @@ class HomeVC: UIViewController {
     }
     func secondsToHoursMinutes (seconds : Int) -> (Int, Int) {
         return (seconds / 3600, (seconds % 3600) / 60)
+    }
+    
+    func secondsToMinutes(seconds: Int) ->(Int){
+        return ((seconds % 3600) / 60)
     }
     
     //Push alert to user
@@ -383,6 +401,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         //time.0 = hours, time.1 = min
         let time = secondsToHoursMinutes(seconds: Int(averageData[4]) ?? -1)
         
+        
+        
         cell.stationImage.image = UIImage(named: "evStation.png")
         cell.averageTitle.text = averageData[0]
         if averageData[1] == "0" {cell.averageCars.text = ""} //print nothing if empty
@@ -391,15 +411,19 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         cell.averageEnergy.text = "\(averageData[3]) kWh"
         cell.averageDuration.text = "\(time.0):\(time.1)"
         
-        if stationWorking{
+        
+        if stationWorking && isStationCongested{
+            cell.stationStatus.textColor = UIColor.yellow
+            cell.stationStatus.text = "Status: Congested"
+        }else if stationWorking{
             cell.stationStatus.textColor = UIColor.green
             cell.stationStatus.text = "Status: Working"
         }
-        else{
+        else{//station not working
             cell.stationStatus.textColor = UIColor.red
             cell.stationStatus.text = "Status: Down"
         }
-        
+        isStationCongested = false //reset
         return cell
     }
     
@@ -425,7 +449,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     
 }
 
-//Table view -> This is sliding menu
+//Table view -> This is sliding settings menu
 extension HomeVC: UITableViewDelegate,UITableViewDataSource{
     
     //number of cells
@@ -437,15 +461,21 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.textColor = UIColor.white
+        cell.imageView?.image = settingsImages[indexPath.row]
         cell.backgroundColor = #colorLiteral(red: 0.2745098039, green: 0.5921568627, blue: 0.3019607843, alpha: 1)
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.textLabel?.text = settingsLabels[indexPath.row]
         return cell
     }
     
+    //Clicked on settings button
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch settingsLabels[indexPath.row] {
+        case "Change Congestion":
+            navGoTo("CongestionVC", animate: true)
+            print("Pressed Change Congestion")
         case "Contact Us":
+            AboutVC.loadWebsite(url: "https://www.zachsapps.com/contact")
             print("Pressed Contact Us")
         case "About Us":
             navGoTo("AboutVC", animate: true)

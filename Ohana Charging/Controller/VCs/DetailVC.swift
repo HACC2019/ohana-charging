@@ -25,7 +25,7 @@ class DetailVC: UIViewController {
     private var energyMonthAvg = [Double]()//y-axis data points
     private var orderedMonths = [String]() //x-axis data points
     
-    //Duration line Chart Data
+    //Spend Bar Chart Data
     private var spentEntryArray = [BarChartDataEntry]()
     private var spentMonthAvg = [Double]()//y-axis data points
 
@@ -42,7 +42,7 @@ class DetailVC: UIViewController {
         super.viewDidLoad()
         self.title = HomeVC.stationClicked //title on nav bar
         let energyDataArrays = getLineData(stationData: HomeVC.clickedStation, type: "energy")
-        let spentDataArrays = getLineData(stationData: HomeVC.clickedStation, type: "duration")
+        let spentDataArrays = getLineData(stationData: HomeVC.clickedStation, type: "spent")
         
         //Get date in format -> mm.yy for line graph with NO duplicates
         orderedMonths = energyDataArrays.0
@@ -66,8 +66,8 @@ class DetailVC: UIViewController {
         
         spendBarChart.xAxis.valueFormatter = self
         spendBarChart.animate(xAxisDuration: 2.0)
-        generateDurationData()
-        assignDurationData()
+        generateSpentData()
+        assignSpentData()
         
     }
     
@@ -137,22 +137,20 @@ class DetailVC: UIViewController {
     
     //--------------------------------------------------------
 
-    //-----------------------Duration Line Chart---------------------------------
-    private func generateDurationData(){
+    //-----------------------Spent Bar Chart---------------------------------
+    private func generateSpentData(){
         for i in 0..<orderedMonths.count{
             spentEntryArray.append(BarChartDataEntry(x: Double(i), y: spentMonthAvg[i]))
         }
         
     }
     
-    private func assignDurationData(){
+    private func assignSpentData(){
         let dataSet = BarChartDataSet(entries: spentEntryArray, label: "Monthy Amount Earned in Dollars ($)")
         let data = BarChartData(dataSet: dataSet)
                
         spendBarChart.legend.font =  UIFont(name: "ArialMT", size: 13.0)!
         spendBarChart.data = data
-        
-        
     }
            
     
@@ -176,7 +174,7 @@ class DetailVC: UIViewController {
             let year = (data.endDate.split(separator: "/"))[2]
             let monthYear = "\(month)/\(year)"
             let energy = data.energy
-            let duration = data.dollarAmount
+            let spend = data.dollarAmount
             
             //Different month is detected
             if(!monthYearArray.contains(monthYear)) {
@@ -188,7 +186,7 @@ class DetailVC: UIViewController {
                 
             }else{ //same month
                 energySum += energy
-                spentSum += duration
+                spentSum += spend
             }
         }
         if type == "energy" {return (monthYearArray,monthEnergyArray)}

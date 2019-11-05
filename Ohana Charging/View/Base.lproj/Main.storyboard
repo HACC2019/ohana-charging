@@ -330,19 +330,40 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzE-0m-bwE">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-1y-4Cc" customClass="PieChartView" customModule="Charts">
-                                                <rect key="frame" x="48" y="52" width="319" height="272"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ir8-Jl-8bB" customClass="LineChartView" customModule="Charts">
-                                                <rect key="frame" x="48" y="408" width="319" height="264"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="kWr-yi-D7X">
+                                                <rect key="frame" x="48" y="52" width="319" height="962"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-1y-4Cc" customClass="PieChartView" customModule="Charts">
+                                                        <rect key="frame" x="0.0" y="0.0" width="319" height="272"/>
+                                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="272" id="OVS-5P-De6"/>
+                                                            <constraint firstAttribute="width" constant="319" id="Slh-ys-TLC"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ir8-Jl-8bB" customClass="LineChartView" customModule="Charts">
+                                                        <rect key="frame" x="0.0" y="353" width="319" height="264"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="264" id="WFH-rv-H2N"/>
+                                                            <constraint firstAttribute="width" constant="319" id="s33-HL-U8T"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaJ-aT-Yc4" customClass="BarChartView" customModule="Charts">
+                                                        <rect key="frame" x="0.0" y="698" width="319" height="264"/>
+                                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="264" id="84r-gW-iBg"/>
+                                                            <constraint firstAttribute="width" constant="319" id="CAX-Ax-zu1"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="kWr-yi-D7X" firstAttribute="centerY" secondItem="OzE-0m-bwE" secondAttribute="centerY" constant="-67" id="Poc-0B-Jxr"/>
+                                            <constraint firstItem="kWr-yi-D7X" firstAttribute="centerX" secondItem="OzE-0m-bwE" secondAttribute="centerX" id="W21-ql-EFG"/>
                                             <constraint firstAttribute="height" constant="1200" id="hxc-8l-3lt"/>
                                         </constraints>
                                     </view>
@@ -379,6 +400,7 @@
                     <connections>
                         <outlet property="energyLineChart" destination="ir8-Jl-8bB" id="9Os-43-sr9"/>
                         <outlet property="pieChart" destination="8gf-1y-4Cc" id="VHD-is-zxd"/>
+                        <outlet property="spendBarChart" destination="yaJ-aT-Yc4" id="Zc7-kg-8aB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SQ-MX-kCO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

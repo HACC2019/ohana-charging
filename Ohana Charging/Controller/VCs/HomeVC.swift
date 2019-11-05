@@ -419,14 +419,14 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         
         
         if stationWorking && isStationCongested{
-            cell.stationStatus.textColor = UIColor.yellow
+            cell.stationStatus.textColor = #colorLiteral(red: 0.8661828041, green: 0.8576400876, blue: 0.05201935023, alpha: 1)
             cell.stationStatus.text = "Status: Congested"
         }else if stationWorking{
-            cell.stationStatus.textColor = UIColor.green
+            cell.stationStatus.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
             cell.stationStatus.text = "Status: Working"
         }
         else{//station not working
-            cell.stationStatus.textColor = UIColor.red
+            cell.stationStatus.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
             cell.stationStatus.text = "Status: Down"
         }
         isStationCongested = false //reset

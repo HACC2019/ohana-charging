@@ -288,11 +288,17 @@ class HomeVC: UIViewController {
 
         if typeAverage == "daily"{
             //Divide by total days to calc average
+            print("DAYS: \(numDays)")
             carAverage /= numDays
+            print("SPENT SUM \(spentAverage)")
             spentAverage /= Double(numDays)
+            print("Energy SUM \(energyAverage)")
+
             energyAverage /= Double(numDays)
+            print("Duration SUM \(durationAverage)")
+
             durationAverage /= numDays
-            
+
             
         }else if typeAverage == "monthly"{
             //Divide by total months to calc average

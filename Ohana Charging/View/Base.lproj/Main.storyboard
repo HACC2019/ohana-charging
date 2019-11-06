@@ -221,11 +221,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="FKb-bV-6s3"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Dqh-Sp-HfI">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hHZ-oA-Qjh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="CJy-fR-sXX"/>
                             <constraint firstAttribute="bottom" secondItem="Y5Y-ur-T3R" secondAttribute="bottom" id="ISg-sV-4pZ"/>
+                            <constraint firstItem="Dqh-Sp-HfI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZn-hZ-LLn"/>
                             <constraint firstItem="mrn-nI-zjL" firstAttribute="top" secondItem="hHZ-oA-Qjh" secondAttribute="bottom" id="WWj-cT-tuh"/>
                             <constraint firstItem="hHZ-oA-Qjh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dtd-ec-bXq"/>
                             <constraint firstItem="Vtc-F7-Hcm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hby-wd-Ox7"/>
@@ -235,6 +240,7 @@
                             <constraint firstItem="Vtc-F7-Hcm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q8d-PR-rX9"/>
                             <constraint firstItem="Y5Y-ur-T3R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="rqW-Gk-4qK"/>
                             <constraint firstItem="hHZ-oA-Qjh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sfM-k9-n8X"/>
+                            <constraint firstItem="Dqh-Sp-HfI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wGf-2B-qAb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -261,6 +267,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Y5Y-ur-T3R" id="Txg-4L-ZcZ"/>
+                        <outlet property="indicator" destination="Dqh-Sp-HfI" id="acd-pT-a1R"/>
                         <outlet property="optionsButton" destination="U02-25-E0e" id="VuP-bb-0xG"/>
                         <outlet property="searchBar" destination="hHZ-oA-Qjh" id="mgB-pO-aMB"/>
                         <outlet property="tableLeadingConstraint" destination="q8d-PR-rX9" id="SW8-cb-YUT"/>
@@ -331,7 +338,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="kWr-yi-D7X">
-                                                <rect key="frame" x="48" y="52" width="319" height="962"/>
+                                                <rect key="frame" x="47.5" y="52" width="319" height="962"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-1y-4Cc" customClass="PieChartView" customModule="Charts">
                                                         <rect key="frame" x="0.0" y="0.0" width="319" height="272"/>

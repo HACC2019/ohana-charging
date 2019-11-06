@@ -11,24 +11,42 @@ class HomeVC: UIViewController {
     static var stationClicked = ""
     var stationInfoA : [StationData] = []
     var stationInfoB : [StationData] = []
+    var addStationA : [StationData] = []
+    var addStationB : [StationData] = []
+
+    
+    var limitedStationInfoA : [StationData] = [] //To simulate refresh data, only some of stationInfoA will be used
+    var limitedStationInfoB : [StationData] = []//To simulate refresh data , only some of limitedStationInfoB will be used
+    
+    
+    
     static var clickedStation : [StationData] = []
     var displayDict : [String : [StationData]] = [:]
     var searchingDict : [String : [StationData]] = [:]
+    var stationStates = [1,1] // 0 - down, 1 - up, 2 - congested
     var settingsLabels = ["Change Congestion","Contact Us", "About Us"]
     var settingsImages = [UIImage(named: "congestionIcon"),UIImage(named: "contactIcon"),UIImage(named: "aboutIcon")]
     var menuShowing = false
     var isSheetCreated = false
+    var addStationAIndex = 0
+    var addStationBIndex = 0
+    var showIndicator = false
+    var numBadData = 0 //number of times bad data was seen
     var searching = false
     var selectedAverage = "session"
-    var stationWorking = true
     private let blackView = UIView()
     private let clearView = UIView()
-    private var isStationCongested = false
     let stationAFileName = "stationA"
     let stationBFileName = "stationB"
+    let addStationAFile = "addStationA"
+    let addStationBFile = "addStationB"
+
     let actionSheet = UIAlertController(title: "Averaging Options",
                                         message: "Please select an averaging option to show",
                                         preferredStyle: .actionSheet)
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     
     @IBOutlet weak var optionsButton: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -41,13 +59,16 @@ class HomeVC: UIViewController {
         searchBar.delegate = self
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
+        indicator.isHidden = true
         //Hide sliding menu
         tableLeadingConstraint.constant = -238.0
         
         //Load JSON Data Files into arrays
         stationInfoA = loadStationData(name: stationAFileName)
         stationInfoB = loadStationData(name: stationBFileName)
+        addStationA = loadStationData(name: addStationAFile)
+        addStationB = loadStationData(name: addStationBFile)
+
         
         //This dict is used in feed, this is setting items in dict
         displayDict["A"] = stationInfoA
@@ -76,12 +97,72 @@ class HomeVC: UIViewController {
     
     @IBAction func refreshPressed(_ sender: Any) {
         print("Refresh Pressed")
+        loadIndicator()
+
+        loadMoreData()//load more data into station A and B
+        
+        //Turn indicator off after n seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.loadIndicator()
+        }
+      
     }
     
     @IBAction func avgPressed(_ sender: Any) {
         print("Average Button Pressed")
         presentSheet()
     }
+    
+    
+    //Loads one piece of data when refresh pressed to simulate the resfresh feature
+    private func loadMoreData(){
+        print(addStationA.count)
+        print(addStationB.count)
+
+        print(addStationAIndex)
+        if((addStationAIndex >= addStationA.count) || (addStationBIndex >= addStationB.count)) { //show alert
+            HomeVC.alert(message: "Data is current", title: "No Data Available for Station A", actionType: .default)
+        }else{ //there is more data to add
+            stationInfoA.append(addStationA[addStationAIndex])
+            addStationAIndex += 1
+            
+            stationInfoB.append(addStationB[addStationBIndex])
+            testStationDown(data: stationInfoB[stationInfoB.count - 1], stationID: "B")
+            addStationBIndex += 1
+        }
+        //Update dictionary
+        displayDict["A"] = stationInfoA
+        displayDict["B"] = stationInfoB
+        
+        //Reload Feed
+        collectionView.reloadData()
+    }
+    
+    private func loadIndicator(){
+        if !showIndicator{//show indicator
+            indicator.isHidden = false
+            indicator.startAnimating()
+            showIndicator = true
+        }else{//stop and hide indicator
+            indicator.isHidden = true
+            indicator.stopAnimating()
+            showIndicator = false
+        }
+    }
+    
+    private func testStationDown(data: StationData,stationID: String){
+        if((data.duration > 0) && (data.energy == 0.0) && (data.dollarAmount == 0.0)){
+            numBadData += 1
+        }
+        if numBadData >= 3 { //if n pieces of bad data are seen then station is down
+            if stationID.lowercased() == "a" {stationStates[0] = 0}
+            else {stationStates[1] = 0}
+        }else{
+            if stationID.lowercased() == "a" {stationStates[0] = 1}
+            else {stationStates[1] = 1}
+        }
+    }
+    
     
     private func presentSheet(){
         if !isSheetCreated{
@@ -215,6 +296,8 @@ class HomeVC: UIViewController {
         return nil
     }
     
+    
+    
     //Loads json file into data array
     private func loadStationData(name: String) -> [StationData]{
         var dataArray : [StationData] = []
@@ -244,7 +327,7 @@ class HomeVC: UIViewController {
     
     //Calculate type of average based on typeAverage
     //Return array = [averageType, carAverage,spentAvereage,energyAverage,durationAverage]
-    private func calculateAverage(array: [StationData], typeAverage: String) -> [String]{
+    private func calculateAverage(array: [StationData], typeAverage: String,stationID: String) -> [String]{
         var output : [String] = []
         var monthYearArray = [String]() // mm/yy
         var monthDayYearArray = [String]() // mm/dd/yy
@@ -316,7 +399,11 @@ class HomeVC: UIViewController {
             //If daily duration is greater or equal to the selected congestedNum
             //Then station is congested
             if(secondsToMinutes(seconds: durationAverage) >= UserDefaults.standard.integer(forKey: "congestNum")){
-                isStationCongested = true
+                if stationID.lowercased() == "a"{stationStates[0] = 2}
+                else{stationStates[1] = 2}
+               
+                
+                
             }
             
         }
@@ -337,7 +424,7 @@ class HomeVC: UIViewController {
     }
     
     //Push alert to user
-    static func alert(message: String, title: String = "", actionType: UIAlertAction.Style) {
+    static func alert(message: String, title: String, actionType: UIAlertAction.Style) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         HomeVC.topViewController()?.present(alert, animated: true, completion: nil)
@@ -380,34 +467,36 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StationCollectionViewCell
         var averageData : [String] = []
+        var stationID = ""
         
         //if searching use searchingStations array
         if searching{
-//            print("BEEP")
-            cell.stationId.text = "Station ID: \(Array(searchingDict.keys)[indexPath.row])"
+            stationID = "\(Array(searchingDict.keys)[indexPath.row])"
+            cell.stationId.text = "Station ID: \(stationID)"
             if selectedAverage == "session"{
-                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "session")
+                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "session", stationID: stationID)
             }else if selectedAverage == "daily"{
-                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "daily")
+                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "daily", stationID: stationID)
             }else{ //monthly
-                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "monthly")
+                averageData = calculateAverage(array: Array(searchingDict.values)[indexPath.row], typeAverage: "monthly", stationID: stationID)
             }
             
-            //elseuse stations array
+        //else use stations array
         }else{
-            cell.stationId.text = "Station ID: \(Array(displayDict.keys)[indexPath.row])"
+            stationID = "\(Array(displayDict.keys)[indexPath.row])"
+            cell.stationId.text = "Station ID: \(stationID)"
             if selectedAverage == "session"{
-                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row] , typeAverage: "session")
+                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row] , typeAverage: "session", stationID: stationID)
             }else if selectedAverage == "daily"{
-                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row], typeAverage: "daily")
+                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row], typeAverage: "daily", stationID: stationID)
             }else{ //monthly
-                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row], typeAverage: "monthly")
+                averageData = calculateAverage(array: Array(displayDict.values)[indexPath.row], typeAverage: "monthly", stationID: stationID)
             }
         }
         //time.0 = hours, time.1 = min
         let time = secondsToHoursMinutes(seconds: Int(averageData[4]) ?? -1)
-        
-        
+        let cellStatus = getStationStatus(stationID: "\(stationID)")
+        print("CELL STATUS \(cell)")
         
         cell.stationImage.image = UIImage(named: "evStation.png")
         cell.averageTitle.text = averageData[0]
@@ -417,19 +506,18 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         cell.averageEnergy.text = "\(averageData[3]) kWh"
         cell.averageDuration.text = "\(time.0):\(time.1)"
         
-        
-        if stationWorking && isStationCongested{
-            cell.stationStatus.textColor = #colorLiteral(red: 0.8661828041, green: 0.8576400876, blue: 0.05201935023, alpha: 1)
-            cell.stationStatus.text = "Status: Congested"
-        }else if stationWorking{
+        //Station not working
+        if cellStatus == 0{
+            cell.stationStatus.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+            cell.stationStatus.text = "Status: Down"
+        }else if cellStatus == 1{ //station is up
             cell.stationStatus.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
             cell.stationStatus.text = "Status: Working"
         }
-        else{//station not working
-            cell.stationStatus.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
-            cell.stationStatus.text = "Status: Down"
+        else{//station is congested
+            cell.stationStatus.textColor = #colorLiteral(red: 0.8661828041, green: 0.8576400876, blue: 0.05201935023, alpha: 1)
+            cell.stationStatus.text = "Status: Congested"
         }
-        isStationCongested = false //reset
         return cell
     }
     
@@ -450,6 +538,20 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         }
         
         navGoTo("DetailVC", animate: true)
+    }
+    
+    func getStationStatus(stationID: String) -> Int{
+        switch stationID.lowercased() {
+        case "a":
+            return stationStates[0]
+        case "b":
+            return stationStates[1]
+        default:
+            print("Station not found")
+            return 1
+        }
+        
+        
     }
     
     

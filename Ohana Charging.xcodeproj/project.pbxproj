@@ -24,6 +24,8 @@
 		DA5664E7235C180700ABD256 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5664E5235C180700ABD256 /* LaunchScreen.storyboard */; };
 		DA5664F3235C1C8B00ABD256 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5664F2235C1C8B00ABD256 /* InitialVC.swift */; };
 		DA5664F8235C1FE000ABD256 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5664F7235C1FE000ABD256 /* MainNavVC.swift */; };
+		DA6DDDA02372A0E0008980AB /* addStationB.json in Resources */ = {isa = PBXBuildFile; fileRef = DA6DDD9E2372A0E0008980AB /* addStationB.json */; };
+		DA6DDDA12372A0E0008980AB /* addStationA.json in Resources */ = {isa = PBXBuildFile; fileRef = DA6DDD9F2372A0E0008980AB /* addStationA.json */; };
 		DA87D8B0235EED78002BA85A /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8AF235EED78002BA85A /* DetailVC.swift */; };
 		DA87D8B3235EEE26002BA85A /* StationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8B2235EEE26002BA85A /* StationCollectionViewCell.swift */; };
 		DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8B4235EEE48002BA85A /* StationData.swift */; };
@@ -53,6 +55,8 @@
 		DA5664E8235C180700ABD256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5664F2235C1C8B00ABD256 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		DA5664F7235C1FE000ABD256 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
+		DA6DDD9E2372A0E0008980AB /* addStationB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addStationB.json; sourceTree = "<group>"; };
+		DA6DDD9F2372A0E0008980AB /* addStationA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = addStationA.json; sourceTree = "<group>"; };
 		DA87D8AF235EED78002BA85A /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		DA87D8B2235EEE26002BA85A /* StationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA87D8B4235EEE48002BA85A /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 			children = (
 				DA3811AD2370F259007B93D7 /* stationA.json */,
 				DA3811AE2370F259007B93D7 /* stationB.json */,
+				DA6DDD9F2372A0E0008980AB /* addStationA.json */,
+				DA6DDD9E2372A0E0008980AB /* addStationB.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -279,9 +285,11 @@
 				DA3811B62370F322007B93D7 /* csv2json.py in Resources */,
 				DA5664E4235C180700ABD256 /* Assets.xcassets in Resources */,
 				DA5664E2235C180500ABD256 /* Main.storyboard in Resources */,
+				DA6DDDA12372A0E0008980AB /* addStationA.json in Resources */,
 				DA3811AF2370F259007B93D7 /* stationA.json in Resources */,
 				DA3811B72370F322007B93D7 /* cleanNoise.py in Resources */,
 				DA3811B02370F259007B93D7 /* stationB.json in Resources */,
+				DA6DDDA02372A0E0008980AB /* addStationB.json in Resources */,
 				DA3811B52370F322007B93D7 /* split.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

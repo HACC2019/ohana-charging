@@ -18,12 +18,15 @@ class HomeVC: UIViewController {
     var limitedStationInfoA : [StationData] = [] //To simulate refresh data, only some of stationInfoA will be used
     var limitedStationInfoB : [StationData] = []//To simulate refresh data , only some of limitedStationInfoB will be used
     
-    
+    //These are calculated from java files
+    private var calculatedWaitingA = 96 //In min, calcualted wait time that is considered "congested"
+    private var calculatedWaitingB = 96 //In min, calcualted wait time that is considered "congested"
+
     
     static var clickedStation : [StationData] = []
     var displayDict : [String : [StationData]] = [:]
     var searchingDict : [String : [StationData]] = [:]
-    var stationStates = [1,1] // 0 - down, 1 - up, 2 - congested
+    static var stationStates = [1,1] // 0 - down, 1 - up, 2 - congested
     var settingsLabels = ["Change Congestion","Contact Us", "About Us"]
     var settingsImages = [UIImage(named: "congestionIcon"),UIImage(named: "contactIcon"),UIImage(named: "aboutIcon")]
     var menuShowing = false
@@ -62,7 +65,7 @@ class HomeVC: UIViewController {
         indicator.isHidden = true
         //Hide sliding menu
         tableLeadingConstraint.constant = -238.0
-        
+    
         //Load JSON Data Files into arrays
         stationInfoA = loadStationData(name: stationAFileName)
         stationInfoB = loadStationData(name: stationBFileName)
@@ -76,7 +79,7 @@ class HomeVC: UIViewController {
 //        selectedAverage = "daily"
         
         print("Congested Num Selected: \(UserDefaults.standard.integer(forKey: "congestNum"))")
-        
+        loadStationStates()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -113,7 +116,38 @@ class HomeVC: UIViewController {
         presentSheet()
     }
     
+    func chartPressed(_ indexPath: IndexPath) {
+        print("HELLLO")
+        searchBar.endEditing(true) //when a chart button is clicked hide keyboard
+        if searching{
+
+            //Display station name
+            HomeVC.stationClicked = "Station: \(Array(searchingDict.keys)[indexPath.row])"
+
+            //Store clicked station to use on DeatailVC
+            HomeVC.clickedStation = Array(searchingDict.values)[indexPath.row]
+
+        }else{
+            HomeVC.stationClicked = "Station: \(Array(displayDict.keys)[indexPath.row])"
+            HomeVC.clickedStation = Array(displayDict.values)[indexPath.row]
+
+        }
+        
+        navGoTo("DetailVC", animate: true)
+  
+    }
     
+    
+    private func loadStationStates(){
+        if isStationCongested(station: "a") {HomeVC.stationStates[0] = 2}
+        else{
+            if HomeVC.stationStates[0] != 0 {HomeVC.stationStates[0] = 1}
+        }
+        if isStationCongested(station: "b") {HomeVC.stationStates[1] = 2}
+        else{
+              if HomeVC.stationStates[1] != 0 {HomeVC.stationStates[1] = 1}
+        }
+    }
     //Loads one piece of data when refresh pressed to simulate the resfresh feature
     private func loadMoreData(){
         print(addStationA.count)
@@ -121,7 +155,7 @@ class HomeVC: UIViewController {
 
         print(addStationAIndex)
         if((addStationAIndex >= addStationA.count) || (addStationBIndex >= addStationB.count)) { //show alert
-            HomeVC.alert(message: "Data is current", title: "No Data Available for Station A", actionType: .default)
+            alert(message: "Data is current", title: "No Data Available for Station A", actionType: .default)
         }else{ //there is more data to add
             stationInfoA.append(addStationA[addStationAIndex])
             addStationAIndex += 1
@@ -155,12 +189,14 @@ class HomeVC: UIViewController {
             numBadData += 1
         }
         if numBadData >= 3 { //if n pieces of bad data are seen then station is down
-            if stationID.lowercased() == "a" {stationStates[0] = 0}
-            else {stationStates[1] = 0}
+            if stationID.lowercased() == "a" {HomeVC.stationStates[0] = 0}
+            else {HomeVC.stationStates[1] = 0}
         }else{
-            if stationID.lowercased() == "a" {stationStates[0] = 1}
-            else {stationStates[1] = 1}
+            if stationID.lowercased() == "a" {HomeVC.stationStates[0] = 1}
+            else {HomeVC.stationStates[1] = 1}
         }
+        
+        print("B STATE: \(HomeVC.stationStates[1])")
     }
     
     
@@ -395,17 +431,6 @@ class HomeVC: UIViewController {
             energyAverage /= Double(array.count)
             durationAverage /= array.count
             carAverage = 0
-            
-            //If daily duration is greater or equal to the selected congestedNum
-            //Then station is congested
-            if(secondsToMinutes(seconds: durationAverage) >= UserDefaults.standard.integer(forKey: "congestNum")){
-                if stationID.lowercased() == "a"{stationStates[0] = 2}
-                else{stationStates[1] = 2}
-               
-                
-                
-            }
-            
         }
         
         spentAverage = spentAverage.rounded(toPlaces: 2)
@@ -423,33 +448,24 @@ class HomeVC: UIViewController {
         return ((seconds % 3600) / 60)
     }
     
-    //Push alert to user
-    static func alert(message: String, title: String, actionType: UIAlertAction.Style) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        HomeVC.topViewController()?.present(alert, animated: true, completion: nil)
+    private func isStationCongested(station: String) -> Bool{
+        if station.lowercased() == "a"{
+            if HomeVC.stationStates[0] != 0{ //make sure station is not down
+                if(calculatedWaitingA >= UserDefaults.standard.integer(forKey: "congestNum")){return true}
+            }else {return false}
+            
+            
+        }else if station.lowercased() == "b"{
+            if HomeVC.stationStates[1] != 0{ //make sure station is not down
+                if(calculatedWaitingB >= UserDefaults.standard.integer(forKey: "congestNum")){return true}
+            }else {return false}
+        }
+        return false //station not found
     }
-    
-    //Find top view controller
-    static func topViewController(base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
-        if let nav = base as? UINavigationController {
-            return topViewController(base: nav.visibleViewController)
-        }
-        if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
-            return topViewController(base: selected)
-        }
-        if let presented = base?.presentedViewController {
-            return topViewController(base: presented)
-        }
-        
-        return base
-    }
-    
-    
 }
 
 //Collection View -> Showing the preview of the station data
-extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, OverViewDelegate{
     
     
     //Cell size
@@ -468,7 +484,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! StationCollectionViewCell
         var averageData : [String] = []
         var stationID = ""
-        
+      
         //if searching use searchingStations array
         if searching{
             stationID = "\(Array(searchingDict.keys)[indexPath.row])"
@@ -498,6 +514,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         let cellStatus = getStationStatus(stationID: "\(stationID)")
         print("CELL STATUS \(cell)")
         
+        cell.overViewDelegate = self
+        cell.indexPath = indexPath
         cell.stationImage.image = UIImage(named: "evStation.png")
         cell.averageTitle.text = averageData[0]
         if averageData[1] == "0" {cell.averageCars.text = ""} //print nothing if empty
@@ -521,31 +539,31 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        searchBar.endEditing(true) //when a cell is clicked hide keyboard
-        if searching{
-            
-            //Display station name
-            HomeVC.stationClicked = "Station: \(Array(searchingDict.keys)[indexPath.row])"
-            
-            //Store clicked station to use on DeatailVC
-            HomeVC.clickedStation = Array(searchingDict.values)[indexPath.row]
-            
-        }else{
-            HomeVC.stationClicked = "Station: \(Array(displayDict.keys)[indexPath.row])"
-            HomeVC.clickedStation = Array(displayDict.values)[indexPath.row]
-            
-        }
-        
-        navGoTo("DetailVC", animate: true)
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        searchBar.endEditing(true) //when a cell is clicked hide keyboard
+//        if searching{
+//
+//            //Display station name
+//            HomeVC.stationClicked = "Station: \(Array(searchingDict.keys)[indexPath.row])"
+//
+//            //Store clicked station to use on DeatailVC
+//            HomeVC.clickedStation = Array(searchingDict.values)[indexPath.row]
+//
+//        }else{
+//            HomeVC.stationClicked = "Station: \(Array(displayDict.keys)[indexPath.row])"
+//            HomeVC.clickedStation = Array(displayDict.values)[indexPath.row]
+//
+//        }
+//
+//        navGoTo("DetailVC", animate: true)
+//    }
     
     func getStationStatus(stationID: String) -> Int{
         switch stationID.lowercased() {
         case "a":
-            return stationStates[0]
+            return HomeVC.stationStates[0]
         case "b":
-            return stationStates[1]
+            return HomeVC.stationStates[1]
         default:
             print("Station not found")
             return 1
@@ -583,13 +601,13 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource{
             navGoTo("CongestionVC", animate: true)
             print("Pressed Change Congestion")
         case "Contact Us":
-            AboutVC.loadWebsite(url: "https://www.zachsapps.com/contact")
+            loadWebsite(url: "https://www.zachsapps.com/contact")
             print("Pressed Contact Us")
         case "About Us":
             navGoTo("AboutVC", animate: true)
             print("Pressed About Us")
         default:
-            print(-1)
+            print("Button Not Found (-1)")
             
         }
         

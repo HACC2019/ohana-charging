@@ -169,16 +169,31 @@
                                                         <constraint firstAttribute="width" constant="145" id="eps-Ev-ZDw"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7y-dq-GXK">
+                                                    <rect key="frame" x="353" y="8" width="50" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="4e6-k8-bkU"/>
+                                                        <constraint firstAttribute="height" constant="47" id="Doi-3B-CNw"/>
+                                                    </constraints>
+                                                    <state key="normal" image="chartsButton"/>
+                                                    <connections>
+                                                        <action selector="chartsPressed:" destination="4Vq-U5-5IW" eventType="touchUpInside" id="y5G-4o-N8I"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NTy-Ij-mxV" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" id="22V-FL-hmw"/>
                                                 <constraint firstItem="5MZ-oF-Zdo" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="31.5" id="Ec8-O0-IRK"/>
                                                 <constraint firstItem="NTy-Ij-mxV" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="-85.5" id="OBC-x3-hUp"/>
                                                 <constraint firstItem="fFk-FI-q6q" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" id="Zns-jD-t3t"/>
+                                                <constraint firstItem="b7y-dq-GXK" firstAttribute="leading" secondItem="fFk-FI-q6q" secondAttribute="trailing" constant="54" id="dW6-r4-N6l"/>
+                                                <constraint firstItem="b7y-dq-GXK" firstAttribute="top" secondItem="MSq-0T-eDo" secondAttribute="top" constant="8" id="dcz-gC-GYk"/>
                                                 <constraint firstItem="fFk-FI-q6q" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="-114.5" id="gZJ-cX-48g"/>
                                                 <constraint firstItem="L9Q-45-evI" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" constant="92" id="jbb-wd-hAs"/>
+                                                <constraint firstAttribute="trailing" secondItem="b7y-dq-GXK" secondAttribute="trailing" constant="8" id="kYP-V1-WNu"/>
                                                 <constraint firstItem="5MZ-oF-Zdo" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" constant="-95" id="mg1-Jy-Dkt"/>
                                                 <constraint firstItem="L9Q-45-evI" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="17" id="omP-dX-frD"/>
+                                                <constraint firstItem="L9Q-45-evI" firstAttribute="top" secondItem="b7y-dq-GXK" secondAttribute="bottom" constant="29" id="xEr-IK-oOg"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="411" height="268"/>
@@ -188,6 +203,7 @@
                                             <outlet property="averageEnergy" destination="NbU-2X-ufb" id="cLw-53-KWe"/>
                                             <outlet property="averageSpent" destination="Csd-yU-TMq" id="5zH-LI-C1i"/>
                                             <outlet property="averageTitle" destination="YtL-I5-m01" id="CTD-86-NjZ"/>
+                                            <outlet property="chartsButton" destination="b7y-dq-GXK" id="wPK-ho-vQz"/>
                                             <outlet property="stationId" destination="fFk-FI-q6q" id="Cg1-sL-a0t"/>
                                             <outlet property="stationImage" destination="5MZ-oF-Zdo" id="gZq-Rg-qBv"/>
                                             <outlet property="stationStatus" destination="NTy-Ij-mxV" id="oaZ-QC-L5v"/>
@@ -455,7 +471,7 @@
                                     <action selector="donePressed:" destination="cCb-Np-TLd" eventType="touchUpInside" id="Nar-cG-p0V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select a session average for duration (in minutes) that would be considered congested." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0f-6s-D8b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long should a user wait to charger their car? (In Minutes)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0f-6s-D8b">
                                 <rect key="frame" x="69" y="173" width="276" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="XcI-ff-rSl"/>
@@ -523,6 +539,7 @@
     </scenes>
     <resources>
         <image name="changeAvgIcon" width="11.333333015441895" height="32.666667938232422"/>
+        <image name="chartsButton" width="48" height="48"/>
         <image name="gpsIcon" width="40" height="40"/>
         <image name="justIcon" width="666.66668701171875" height="666.66668701171875"/>
         <image name="optionButton" width="40" height="40"/>

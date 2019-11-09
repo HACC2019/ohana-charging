@@ -260,7 +260,7 @@ class DetailVC: UIViewController {
     private func openMaps(mapType: String,canOpenURL: String, openURL: String){
         //If can open url then open url else show alert saying user does not have app
         (UIApplication.shared.canOpenURL(URL(string:canOpenURL)!)) ? (UIApplication.shared.open(NSURL(string:
-            openURL)! as URL)) : (HomeVC.alert(message: "\(mapType) is not installed on this phone.", title: "\(mapType) Unavailable", actionType: .default))
+            openURL)! as URL)) : (alert(message: "\(mapType) is not installed on this phone.", title: "\(mapType) Unavailable", actionType: .default))
     }
     
     

@@ -16,8 +16,12 @@ class StationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var averageDuration: UILabel!
     @IBOutlet weak var averageSpent: UILabel!
     @IBOutlet weak var stationStatus: UILabel!
+    @IBOutlet weak var chartsButton: UIButton!
+    var overViewDelegate: OverViewDelegate?
+    var indexPath : IndexPath?
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         createShadow(imageView: stationImage)
         stationId.layer.shadowOpacity = 0.2
         averageTitle.layer.shadowOpacity = 0.2
@@ -25,6 +29,7 @@ class StationCollectionViewCell: UICollectionViewCell {
         averageEnergy.layer.shadowOpacity = 0.2
         averageDuration.layer.shadowOpacity = 0.2
         averageSpent.layer.shadowOpacity = 0.2
+        chartsButton.layer.shadowOpacity = 0.5
         //        stationStatus.layer.shadowOpacity = 0.2
     }
     
@@ -36,5 +41,12 @@ class StationCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = false
     }
     
+    @IBAction func chartsPressed(_ sender: Any) {
+        overViewDelegate?.chartPressed(indexPath!) //send index path to action in HomeVC
+    }
     
+}
+protocol OverViewDelegate {
+    func chartPressed(_ indexPath : IndexPath)
+   
 }

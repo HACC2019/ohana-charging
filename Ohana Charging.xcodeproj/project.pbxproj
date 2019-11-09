@@ -31,6 +31,9 @@
 		DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87D8B4235EEE48002BA85A /* StationData.swift */; };
 		DAA496762361797200D17F56 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA496752361797200D17F56 /* Station.swift */; };
 		DABDBE0C236E5C47005FF8C9 /* CongestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDBE0B236E5C47005FF8C9 /* CongestionVC.swift */; };
+		DAF127B423765CCA00B4F41F /* EventList.java in Sources */ = {isa = PBXBuildFile; fileRef = DAF127B123765CC900B4F41F /* EventList.java */; };
+		DAF127B523765CCA00B4F41F /* Main.java in Sources */ = {isa = PBXBuildFile; fileRef = DAF127B223765CCA00B4F41F /* Main.java */; };
+		DAF127B623765CCA00B4F41F /* Event.java in Sources */ = {isa = PBXBuildFile; fileRef = DAF127B323765CCA00B4F41F /* Event.java */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		DA87D8B4235EEE48002BA85A /* StationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
 		DAA496752361797200D17F56 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		DABDBE0B236E5C47005FF8C9 /* CongestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongestionVC.swift; sourceTree = "<group>"; };
+		DAF127B123765CC900B4F41F /* EventList.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = EventList.java; sourceTree = "<group>"; };
+		DAF127B223765CCA00B4F41F /* Main.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Main.java; sourceTree = "<group>"; };
+		DAF127B323765CCA00B4F41F /* Event.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Event.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 				DA5664DA235C180500ABD256 /* AppDelegate.swift */,
 				DA5664DC235C180500ABD256 /* SceneDelegate.swift */,
 				DA5664E8235C180700ABD256 /* Info.plist */,
+				DAF127B023765C7300B4F41F /* Java Files */,
 				DA3811B12370F304007B93D7 /* Python Scripts */,
 				DA50F26E23696AD700A2260A /* Internet Connection */,
 				DA87D8AA235EEB36002BA85A /* JSON */,
@@ -220,6 +227,16 @@
 				DA87D8B2235EEE26002BA85A /* StationCollectionViewCell.swift */,
 			);
 			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		DAF127B023765C7300B4F41F /* Java Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAF127B323765CCA00B4F41F /* Event.java */,
+				DAF127B123765CC900B4F41F /* EventList.java */,
+				DAF127B223765CCA00B4F41F /* Main.java */,
+			);
+			path = "Java Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,12 +364,15 @@
 				DA1C6231236177890027F7BB /* Extensions.swift in Sources */,
 				DA50F27023696AF300A2260A /* Reachability.swift in Sources */,
 				DA5664F3235C1C8B00ABD256 /* InitialVC.swift in Sources */,
+				DAF127B523765CCA00B4F41F /* Main.java in Sources */,
 				DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */,
 				DABDBE0C236E5C47005FF8C9 /* CongestionVC.swift in Sources */,
 				DA5664DB235C180500ABD256 /* AppDelegate.swift in Sources */,
 				DA87D8B3235EEE26002BA85A /* StationCollectionViewCell.swift in Sources */,
 				DAA496762361797200D17F56 /* Station.swift in Sources */,
 				DA5664DD235C180500ABD256 /* SceneDelegate.swift in Sources */,
+				DAF127B423765CCA00B4F41F /* EventList.java in Sources */,
+				DAF127B623765CCA00B4F41F /* Event.java in Sources */,
 				DA5664F8235C1FE000ABD256 /* MainNavVC.swift in Sources */,
 				DA87D8B0235EED78002BA85A /* DetailVC.swift in Sources */,
 				DA4A3E442369664200D7F1A0 /* AboutVC.swift in Sources */,
@@ -501,8 +521,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 445VWN7H7M;
 				INFOPLIST_FILE = "Ohana Charging/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,8 +543,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 445VWN7H7M;
 				INFOPLIST_FILE = "Ohana Charging/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

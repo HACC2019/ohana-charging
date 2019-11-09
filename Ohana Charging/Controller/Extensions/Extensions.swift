@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 extension Double {
     /// Rounds the double to decimal places value
     func rounded(toPlaces places:Int) -> Double {
@@ -20,3 +21,21 @@ extension String {
     }
     
 }
+
+extension UIViewController {
+    func alert(message: String, title: String, actionType: UIAlertAction.Style) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func loadWebsite(url: String){
+        if Reachability.isConnectedToNetwork(){
+            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+        }else{
+            alert(message: "There is no internet connection. Please check your internet connection and try again.", title:  "Connection Error", actionType: .default)
+          
+        }
+    }
+}
+

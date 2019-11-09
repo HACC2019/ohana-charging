@@ -20,7 +20,7 @@ class CongestionVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        durationNumbers = fillPicker(min: 20, max: 60)
+        durationNumbers = fillPicker(min: 0, max: 120)
         selectRowForPicker()
         doneButton.setShadowColor(UIColor.black, for: .normal)
     }

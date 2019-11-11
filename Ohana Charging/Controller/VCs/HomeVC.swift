@@ -155,7 +155,7 @@ class HomeVC: UIViewController {
 
         print(addStationAIndex)
         if((addStationAIndex >= addStationA.count) || (addStationBIndex >= addStationB.count)) { //show alert
-            alert(message: "Data is current", title: "No Data Available for Station A", actionType: .default)
+            alert(message: "Data is current", title: "No New Data Is Available", actionType: .default)
         }else{ //there is more data to add
             stationInfoA.append(addStationA[addStationAIndex])
             addStationAIndex += 1

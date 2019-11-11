@@ -32,9 +32,12 @@ public class Main{
       int total = 0;
       // number of Event block
       int numBlock = 0;
-      double mu = 0.00051;                // Service rate 0.00051 jobs/second //mu = 1/mean duration(in seconds)
-      double lambda = 113;            // Arrival rate, we expect 113 sessions in a week (this based on the last week)
-
+      //station b
+      // double mu = 0.00050813;                // Service rate 0.00051 jobs/second //mu = 1/mean duration(in seconds)
+      // double lambda = 0.000115741;            // Arrival rate, we expect 113 sessions in a week (this based on the last week)
+      //station a
+      double lambda = 0.000186839;            // Arrival rate
+      double mu = 0.000513875;                // Service rate
       double clock = 0.0;             // System clock
       int N = 0;                      // Number of customers in system
       int Ndep = 0;                   // Number of departures from system
@@ -85,6 +88,7 @@ public class Main{
       }
     // output simulation results
     System.out.println("This simulation based on a station with 1 charger and 3 waiting slots, if the waiting slots is full, arriving customer will be blocked and they will leave");
-    System.out.printf("Average time a customer spends in the station (simulation): %f hours\n", (EN/(clock*lambda)*7*24));
+    double rho = lambda/mu;
+    System.out.printf("Average time a customer waiting in the station (simulation): %f seconds\n", rho/(mu-lambda));
   }
 }

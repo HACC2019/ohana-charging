@@ -471,7 +471,7 @@
                                     <action selector="donePressed:" destination="cCb-Np-TLd" eventType="touchUpInside" id="Nar-cG-p0V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long should a user wait to charger their car? (In Minutes)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0f-6s-D8b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long should a user wait to charge their car? (In Minutes)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0f-6s-D8b">
                                 <rect key="frame" x="69" y="173" width="276" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="XcI-ff-rSl"/>

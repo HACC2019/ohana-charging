@@ -19,8 +19,8 @@ class HomeVC: UIViewController {
     var limitedStationInfoB : [StationData] = []//To simulate refresh data , only some of limitedStationInfoB will be used
     
     //These are calculated from java files
-    private var calculatedWaitingA = 19 //In min, calcualted wait time that is considered "congested"
-    private var calculatedWaitingB = 10 //In min, calcualted wait time that is considered "congested"
+    private var calculatedWaitingA = 19 //In minutes, calcualted wait time that is considered "congested"
+    private var calculatedWaitingB = 10 //In minutes, calcualted wait time that is considered "congested"
 
     
     static var clickedStation : [StationData] = []

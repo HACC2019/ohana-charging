@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -170,10 +170,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7y-dq-GXK">
-                                                    <rect key="frame" x="353" y="8" width="50" height="47"/>
+                                                    <rect key="frame" x="330" y="8" width="50" height="47"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="4e6-k8-bkU"/>
-                                                        <constraint firstAttribute="height" constant="47" id="Doi-3B-CNw"/>
+                                                        <constraint firstAttribute="height" constant="47" id="JMo-Ub-mtX"/>
+                                                        <constraint firstAttribute="width" constant="50" id="dTP-6X-SkK"/>
                                                     </constraints>
                                                     <state key="normal" image="chartsButton"/>
                                                     <connections>
@@ -183,17 +183,17 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NTy-Ij-mxV" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" id="22V-FL-hmw"/>
+                                                <constraint firstItem="b7y-dq-GXK" firstAttribute="leading" secondItem="fFk-FI-q6q" secondAttribute="trailing" constant="31" id="C85-Vv-rX8"/>
                                                 <constraint firstItem="5MZ-oF-Zdo" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="31.5" id="Ec8-O0-IRK"/>
+                                                <constraint firstItem="L9Q-45-evI" firstAttribute="top" secondItem="b7y-dq-GXK" secondAttribute="bottom" constant="29" id="Lo3-9C-L8p"/>
                                                 <constraint firstItem="NTy-Ij-mxV" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="-85.5" id="OBC-x3-hUp"/>
                                                 <constraint firstItem="fFk-FI-q6q" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" id="Zns-jD-t3t"/>
-                                                <constraint firstItem="b7y-dq-GXK" firstAttribute="leading" secondItem="fFk-FI-q6q" secondAttribute="trailing" constant="54" id="dW6-r4-N6l"/>
-                                                <constraint firstItem="b7y-dq-GXK" firstAttribute="top" secondItem="MSq-0T-eDo" secondAttribute="top" constant="8" id="dcz-gC-GYk"/>
+                                                <constraint firstAttribute="trailing" secondItem="b7y-dq-GXK" secondAttribute="trailing" constant="31" id="dA8-SE-BHt"/>
                                                 <constraint firstItem="fFk-FI-q6q" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="-114.5" id="gZJ-cX-48g"/>
+                                                <constraint firstItem="b7y-dq-GXK" firstAttribute="top" secondItem="MSq-0T-eDo" secondAttribute="top" constant="8" id="haH-1p-40H"/>
                                                 <constraint firstItem="L9Q-45-evI" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" constant="92" id="jbb-wd-hAs"/>
-                                                <constraint firstAttribute="trailing" secondItem="b7y-dq-GXK" secondAttribute="trailing" constant="8" id="kYP-V1-WNu"/>
                                                 <constraint firstItem="5MZ-oF-Zdo" firstAttribute="centerX" secondItem="MSq-0T-eDo" secondAttribute="centerX" constant="-95" id="mg1-Jy-Dkt"/>
                                                 <constraint firstItem="L9Q-45-evI" firstAttribute="centerY" secondItem="MSq-0T-eDo" secondAttribute="centerY" constant="17" id="omP-dX-frD"/>
-                                                <constraint firstItem="L9Q-45-evI" firstAttribute="top" secondItem="b7y-dq-GXK" secondAttribute="bottom" constant="29" id="xEr-IK-oOg"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="411" height="268"/>

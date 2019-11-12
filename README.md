@@ -11,3 +11,5 @@ Features Include:
 - Turn-by-turn GPS directions to each station using any major map application
 - Contact feature to get ahold of developers for any reason
 - User choose a threshold for wait time at a charger to calculate congestion
+
+![Logo](https://github.com/HACC2019/ohana-charging/blob/master/Ohana%20Charging/View/Assets.xcassets/justIcon.imageset/justIcon.png)

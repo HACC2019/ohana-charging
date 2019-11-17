@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		3BE1965DF0F78F10C94646E7 /* Pods_Ohana_Charging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F6E91E0BA8FA007E8EC055 /* Pods_Ohana_Charging.framework */; };
 		DA1C6231236177890027F7BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1C6230236177890027F7BB /* Extensions.swift */; };
-		DA29B8A7237A29B800491923 /* Event (1).java in Sources */ = {isa = PBXBuildFile; fileRef = DA29B8A4237A29B800491923 /* Event (1).java */; };
-		DA29B8A8237A29B800491923 /* EventList (1).java in Sources */ = {isa = PBXBuildFile; fileRef = DA29B8A5237A29B800491923 /* EventList (1).java */; };
-		DA29B8A9237A29B800491923 /* Main (1).java in Sources */ = {isa = PBXBuildFile; fileRef = DA29B8A6237A29B800491923 /* Main (1).java */; };
 		DA3811AF2370F259007B93D7 /* stationA.json in Resources */ = {isa = PBXBuildFile; fileRef = DA3811AD2370F259007B93D7 /* stationA.json */; };
 		DA3811B02370F259007B93D7 /* stationB.json in Resources */ = {isa = PBXBuildFile; fileRef = DA3811AE2370F259007B93D7 /* stationB.json */; };
 		DA3811B52370F322007B93D7 /* split.py in Resources */ = {isa = PBXBuildFile; fileRef = DA3811B22370F322007B93D7 /* split.py */; };
@@ -40,9 +37,9 @@
 		5868129C3EB49BB117423B0F /* Pods-Ohana Charging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ohana Charging.debug.xcconfig"; path = "Target Support Files/Pods-Ohana Charging/Pods-Ohana Charging.debug.xcconfig"; sourceTree = "<group>"; };
 		B6F6E91E0BA8FA007E8EC055 /* Pods_Ohana_Charging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ohana_Charging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1C6230236177890027F7BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		DA29B8A4237A29B800491923 /* Event (1).java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = "Event (1).java"; sourceTree = "<group>"; };
-		DA29B8A5237A29B800491923 /* EventList (1).java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = "EventList (1).java"; sourceTree = "<group>"; };
-		DA29B8A6237A29B800491923 /* Main (1).java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = "Main (1).java"; sourceTree = "<group>"; };
+		DA29B8A4237A29B800491923 /* Event.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Event.java; sourceTree = "<group>"; };
+		DA29B8A5237A29B800491923 /* EventList.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = EventList.java; sourceTree = "<group>"; };
+		DA29B8A6237A29B800491923 /* Main.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Main.java; sourceTree = "<group>"; };
 		DA3811AD2370F259007B93D7 /* stationA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationA.json; sourceTree = "<group>"; };
 		DA3811AE2370F259007B93D7 /* stationB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stationB.json; sourceTree = "<group>"; };
 		DA3811B22370F322007B93D7 /* split.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = split.py; sourceTree = "<group>"; };
@@ -229,9 +226,9 @@
 		DAF127B023765C7300B4F41F /* Java Files */ = {
 			isa = PBXGroup;
 			children = (
-				DA29B8A4237A29B800491923 /* Event (1).java */,
-				DA29B8A5237A29B800491923 /* EventList (1).java */,
-				DA29B8A6237A29B800491923 /* Main (1).java */,
+				DA29B8A4237A29B800491923 /* Event.java */,
+				DA29B8A5237A29B800491923 /* EventList.java */,
+				DA29B8A6237A29B800491923 /* Main.java */,
 			);
 			path = "Java Files";
 			sourceTree = "<group>";
@@ -361,13 +358,10 @@
 				DA1C6231236177890027F7BB /* Extensions.swift in Sources */,
 				DA50F27023696AF300A2260A /* Reachability.swift in Sources */,
 				DA5664F3235C1C8B00ABD256 /* InitialVC.swift in Sources */,
-				DA29B8A9237A29B800491923 /* Main (1).java in Sources */,
 				DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */,
 				DABDBE0C236E5C47005FF8C9 /* CongestionVC.swift in Sources */,
 				DA5664DB235C180500ABD256 /* AppDelegate.swift in Sources */,
 				DA87D8B3235EEE26002BA85A /* StationCollectionViewCell.swift in Sources */,
-				DA29B8A7237A29B800491923 /* Event (1).java in Sources */,
-				DA29B8A8237A29B800491923 /* EventList (1).java in Sources */,
 				DA5664DD235C180500ABD256 /* SceneDelegate.swift in Sources */,
 				DA5664F8235C1FE000ABD256 /* MainNavVC.swift in Sources */,
 				DA87D8B0235EED78002BA85A /* DetailVC.swift in Sources */,

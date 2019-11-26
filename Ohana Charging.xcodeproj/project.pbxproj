@@ -14,6 +14,7 @@
 		DA3811B52370F322007B93D7 /* split.py in Resources */ = {isa = PBXBuildFile; fileRef = DA3811B22370F322007B93D7 /* split.py */; };
 		DA3811B62370F322007B93D7 /* csv2json.py in Resources */ = {isa = PBXBuildFile; fileRef = DA3811B32370F322007B93D7 /* csv2json.py */; };
 		DA3811B72370F322007B93D7 /* cleanNoise.py in Resources */ = {isa = PBXBuildFile; fileRef = DA3811B42370F322007B93D7 /* cleanNoise.py */; };
+		DA43B293238CDBB30029DAB8 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43B292238CDBB30029DAB8 /* HelpVC.swift */; };
 		DA4A3E442369664200D7F1A0 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A3E432369664200D7F1A0 /* AboutVC.swift */; };
 		DA50F27023696AF300A2260A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50F26F23696AF300A2260A /* Reachability.swift */; };
 		DA5664DB235C180500ABD256 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5664DA235C180500ABD256 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		DA3811B22370F322007B93D7 /* split.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = split.py; sourceTree = "<group>"; };
 		DA3811B32370F322007B93D7 /* csv2json.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = csv2json.py; sourceTree = "<group>"; };
 		DA3811B42370F322007B93D7 /* cleanNoise.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = cleanNoise.py; sourceTree = "<group>"; };
+		DA43B292238CDBB30029DAB8 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		DA4A3E432369664200D7F1A0 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		DA50F26F23696AF300A2260A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		DA5664D7235C180500ABD256 /* Ohana Charging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ohana Charging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +194,7 @@
 				DA5664DE235C180500ABD256 /* HomeVC.swift */,
 				DA87D8AF235EED78002BA85A /* DetailVC.swift */,
 				DA4A3E432369664200D7F1A0 /* AboutVC.swift */,
+				DA43B292238CDBB30029DAB8 /* HelpVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				DA1C6231236177890027F7BB /* Extensions.swift in Sources */,
 				DA50F27023696AF300A2260A /* Reachability.swift in Sources */,
 				DA5664F3235C1C8B00ABD256 /* InitialVC.swift in Sources */,
+				DA43B293238CDBB30029DAB8 /* HelpVC.swift in Sources */,
 				DA87D8B5235EEE48002BA85A /* StationData.swift in Sources */,
 				DABDBE0C236E5C47005FF8C9 /* CongestionVC.swift in Sources */,
 				DA5664DB235C180500ABD256 /* AppDelegate.swift in Sources */,

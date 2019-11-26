@@ -27,8 +27,8 @@ class HomeVC: UIViewController {
     var displayDict : [String : [StationData]] = [:]
     var searchingDict : [String : [StationData]] = [:]
     static var stationStates = [1,1] // 0 - down, 1 - up, 2 - congested
-    var settingsLabels = ["Change Congestion","Contact Us", "About Us"]
-    var settingsImages = [UIImage(named: "congestionIcon"),UIImage(named: "contactIcon"),UIImage(named: "aboutIcon")]
+    var settingsLabels = ["Change Congestion","Contact Us", "About Us", "Help"]
+    var settingsImages = [UIImage(named: "congestionIcon"),UIImage(named: "contactIcon"),UIImage(named: "aboutIcon"),UIImage(named: "helpIcon")]
     var menuShowing = false
     var isSheetCreated = false
     var addStationAIndex = 0
@@ -606,6 +606,9 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource{
         case "About Us":
             navGoTo("AboutVC", animate: true)
             print("Pressed About Us")
+        case "Help":
+            navGoTo("HelpVC", animate: true)
+            print("Pressed Help")
         default:
             print("Button Not Found (-1)")
             

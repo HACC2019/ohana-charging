@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5sz-v0-X9V">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="InitialVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5sz-v0-X9V" customClass="InitialVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JEr-Iu-T3m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="justIcon" translatesAutoresizingMaskIntoConstraints="NO" id="K68-9n-Qw6">
-                                <rect key="frame" x="51" y="254" width="313" height="389"/>
+                                <rect key="frame" x="51" y="210" width="313" height="307"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="313" id="ThI-TX-RWb"/>
                                     <constraint firstAttribute="height" constant="389" id="rtr-2v-2TQ"/>
@@ -43,11 +43,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Station ID" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHZ-oA-Qjh">
-                                <rect key="frame" x="0.0" y="99" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="55" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="DQ7-DQ-m2L"/>
                                     <constraint firstAttribute="height" constant="44" id="NgK-ca-grm"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-ur-T3R">
-                                <rect key="frame" x="0.0" y="143" width="414" height="753"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="753" id="T5I-Ah-Pkd"/>
@@ -77,14 +77,14 @@
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="4Vq-U5-5IW" customClass="StationCollectionViewCell" customModule="Ohana_Charging" customModuleProvider="target">
-                                        <rect key="frame" x="1.5" y="0.0" width="411" height="268"/>
+                                        <rect key="frame" x="1.6666666666666667" y="0.0" width="411" height="268"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSq-0T-eDo">
                                             <rect key="frame" x="0.0" y="0.0" width="411" height="268"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-Ij-mxV">
-                                                    <rect key="frame" x="92.5" y="34" width="226" height="29"/>
+                                                    <rect key="frame" x="92.666666666666686" y="34" width="226" height="29"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="226" id="FBo-5o-TZz"/>
                                                         <constraint firstAttribute="height" constant="29" id="air-AV-eGc"/>
@@ -216,7 +216,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vtc-F7-Hcm">
-                                <rect key="frame" x="0.0" y="88" width="238" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="238" height="808"/>
                                 <color key="backgroundColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="808" id="7Nj-Ol-qbb"/>
@@ -238,7 +238,7 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Dqh-Sp-HfI">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
                                 <color key="color" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </activityIndicatorView>
                         </subviews>
@@ -294,16 +294,94 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="138.61607142857142"/>
         </scene>
+        <!--Help-->
+        <scene sceneID="xhL-EZ-TWC">
+            <objects>
+                <viewController storyboardIdentifier="HelpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zaE-2i-iEq" customClass="HelpVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZM4-zp-SUL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-ka-3yp">
+                                <rect key="frame" x="20" y="208.00000000000003" width="48" height="311.66666666666674"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="changeAvgIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BeL-yS-hhJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="32.666666666666664"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chartsButton" translatesAutoresizingMaskIntoConstraints="NO" id="aIk-O6-U2Q">
+                                        <rect key="frame" x="0.0" y="87.666666666666686" width="48" height="48"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionButton" translatesAutoresizingMaskIntoConstraints="NO" id="DFD-2w-DBN">
+                                        <rect key="frame" x="0.0" y="190.66666666666669" width="48" height="40"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refreshIcon" translatesAutoresizingMaskIntoConstraints="NO" id="iWi-hJ-Kwi">
+                                        <rect key="frame" x="0.0" y="285.66666666666669" width="48" height="26"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="TOx-HI-63Q"/>
+                                    <constraint firstAttribute="height" constant="311.66666666666669" id="pdY-Z4-pQI"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="nKH-LD-5FQ">
+                                <rect key="frame" x="106" y="206.99999999999997" width="288" height="312.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display a new type of average" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gR-qK-ckD">
+                                        <rect key="frame" x="29.666666666666671" y="0.0" width="228.66666666666663" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graphs button to display graphs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhB-gN-KZh">
+                                        <rect key="frame" x="21.333333333333329" y="97.333333333333314" width="245.66666666666669" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyB-rG-TUG">
+                                        <rect key="frame" x="85" y="194.66666666666669" width="118" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh data to get more current data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agR-jc-3gi">
+                                        <rect key="frame" x="0.0" y="292" width="288" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="312.33333333333331" id="Hi9-Rk-fhW"/>
+                                    <constraint firstAttribute="width" constant="288" id="RhY-pm-nYm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nKH-LD-5FQ" firstAttribute="centerX" secondItem="ZM4-zp-SUL" secondAttribute="centerX" constant="43" id="MqB-7d-d1S"/>
+                            <constraint firstItem="2qH-ka-3yp" firstAttribute="centerX" secondItem="ZM4-zp-SUL" secondAttribute="centerX" constant="-163" id="QUa-jA-8Lb"/>
+                            <constraint firstItem="nKH-LD-5FQ" firstAttribute="centerY" secondItem="ZM4-zp-SUL" secondAttribute="centerY" constant="-4.8333333333333712" id="jh2-8d-Sbw"/>
+                            <constraint firstItem="2qH-ka-3yp" firstAttribute="centerY" secondItem="ZM4-zp-SUL" secondAttribute="centerY" constant="-4.1666666666666288" id="lyz-q3-L5g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zbg-0s-KEY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="p5U-OC-sfB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVc-BA-On9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076.8115942028987" y="823.36956521739137"/>
+        </scene>
         <!--About Us-->
         <scene sceneID="T3T-v5-kkB">
             <objects>
                 <viewController storyboardIdentifier="AboutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tpw-n7-y6S" customClass="AboutVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UZe-Mr-4rk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-KM-Ima">
-                                <rect key="frame" x="39" y="368.5" width="336" height="159"/>
+                                <rect key="frame" x="39" y="288.66666666666669" width="336" height="159"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="336" id="SHV-UM-xoY"/>
@@ -354,7 +432,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="kWr-yi-D7X">
-                                                <rect key="frame" x="47.5" y="52" width="319" height="962"/>
+                                                <rect key="frame" x="47.666666666666657" y="52" width="319" height="962"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-1y-4Cc" customClass="PieChartView" customModule="Charts">
                                                         <rect key="frame" x="0.0" y="0.0" width="319" height="272"/>
@@ -435,11 +513,11 @@
             <objects>
                 <viewController storyboardIdentifier="CongestionVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cCb-Np-TLd" customClass="CongestionVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IcA-Q7-lng">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-84-WVi">
-                                <rect key="frame" x="0.0" y="340" width="414" height="255"/>
+                                <rect key="frame" x="0.0" y="296" width="414" height="173"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="7tF-xF-6RP"/>
                                     <constraint firstAttribute="height" constant="255" id="Gu2-PQ-edy"/>
@@ -450,14 +528,14 @@
                                 </connections>
                             </pickerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="justIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NOI-Y6-PGZ">
-                                <rect key="frame" x="154.5" y="70" width="105" height="106"/>
+                                <rect key="frame" x="154.66666666666666" y="26" width="104.99999999999997" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="8gI-8U-SZk"/>
                                     <constraint firstAttribute="width" constant="105" id="a1F-aC-Ujm"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-3T-LGd" customClass="MDCFloatingButton">
-                                <rect key="frame" x="125.5" y="625" width="163" height="71"/>
+                                <rect key="frame" x="125.66666666666669" y="499" width="163" height="71"/>
                                 <color key="backgroundColor" red="0.27450980392156865" green="0.59215686274509804" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="RZf-mL-aEg"/>
@@ -472,7 +550,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long should a user wait to charge their car? (In Minutes)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0f-6s-D8b">
-                                <rect key="frame" x="69" y="173" width="276" height="177"/>
+                                <rect key="frame" x="69" y="129" width="276" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="XcI-ff-rSl"/>
                                     <constraint firstAttribute="width" constant="276" id="fNV-5X-8wL"/>
@@ -515,7 +593,7 @@
                 <navigationController storyboardIdentifier="MainNavVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PwX-Bc-Op3" customClass="MainNavVC" customModule="Ohana_Charging" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6vw-EP-NBq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.27450980392156865" green="0.59215686274509804" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

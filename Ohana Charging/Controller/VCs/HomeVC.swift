@@ -539,25 +539,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        searchBar.endEditing(true) //when a cell is clicked hide keyboard
-//        if searching{
-//
-//            //Display station name
-//            HomeVC.stationClicked = "Station: \(Array(searchingDict.keys)[indexPath.row])"
-//
-//            //Store clicked station to use on DeatailVC
-//            HomeVC.clickedStation = Array(searchingDict.values)[indexPath.row]
-//
-//        }else{
-//            HomeVC.stationClicked = "Station: \(Array(displayDict.keys)[indexPath.row])"
-//            HomeVC.clickedStation = Array(displayDict.values)[indexPath.row]
-//
-//        }
-//
-//        navGoTo("DetailVC", animate: true)
-//    }
-    
     func getStationStatus(stationID: String) -> Int{
         switch stationID.lowercased() {
         case "a":
@@ -568,11 +549,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollect
             print("Station not found")
             return 1
         }
-        
-        
     }
-    
-    
 }
 
 //Table view -> This is sliding settings menu
@@ -631,7 +608,6 @@ extension HomeVC: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {        
         //Filer based on search results
         searchingDict = displayDict.filter({$0.key.lowercased().prefix(searchText.count) == searchText.lowercased()})
-//        print("SEARCH \(searchingDict.count)")
         searching = true
         collectionView.reloadData()
     }

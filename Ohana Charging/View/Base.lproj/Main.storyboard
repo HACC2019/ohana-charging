@@ -238,7 +238,7 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Dqh-Sp-HfI">
-                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
+                                <rect key="frame" x="188.66666666666666" y="407.66666666666669" width="37" height="37"/>
                                 <color key="color" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </activityIndicatorView>
                         </subviews>
@@ -517,7 +517,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-84-WVi">
-                                <rect key="frame" x="0.0" y="296" width="414" height="173"/>
+                                <rect key="frame" x="0.0" y="214" width="414" height="255"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="7tF-xF-6RP"/>
                                     <constraint firstAttribute="height" constant="255" id="Gu2-PQ-edy"/>
@@ -550,7 +550,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long should a user wait to charge their car? (In Minutes)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0f-6s-D8b">
-                                <rect key="frame" x="69" y="129" width="276" height="177"/>
+                                <rect key="frame" x="69" y="129" width="276" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="XcI-ff-rSl"/>
                                     <constraint firstAttribute="width" constant="276" id="fNV-5X-8wL"/>
